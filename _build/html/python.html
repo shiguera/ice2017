@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>10. Python OsmApi &mdash; documentación de Cayapas OSM - 1.0</title>
+    
+    <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="documentación de Cayapas OSM - 1.0" href="index.html" />
+    <link rel="next" title="11. Javascript" href="javascript.html" />
+    <link rel="prev" title="9. Osm4j" href="osm4j.html" /> 
+  </head>
+  <body role="document">
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="index.html">documentación de Cayapas OSM - 1.0</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="osm4j.html" title="9. Osm4j"
+             accesskey="P">anterior</a> |
+          <a href="javascript.html" title="11. Javascript"
+             accesskey="N">siguiente</a> |
+          <a href="genindex.html" title="Índice General"
+             accesskey="I">índice</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="python-osmapi">
+<h1>10. Python OsmApi<a class="headerlink" href="#python-osmapi" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Permite la descarga de datos desde la base de datos y también la actualización de la base de datos. Hay que respetar los códigos de conducta cuando se suben datos a OSM.</p>
+<p>Para utilizar la librería tendremos que instalarla con:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>pip install osmapi
+</pre></div>
+</div>
+<div class="section" id="hello-world-node-download">
+<h2>10.1. Hello World : node download<a class="headerlink" href="#hello-world-node-download" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Un ejemplo en Python 3 para descargar la información de un Node del que conocemos su Id sería:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">osmapi</span> <span class="kn">import</span> <span class="n">OsmApi</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">MyApi</span> <span class="o">=</span> <span class="n">OsmApi</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">MyApi</span><span class="o">.</span><span class="n">NodeGet</span><span class="p">(</span><span class="mi">3926595467</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>El resultado sería el siguiente:</p>
+<a class="reference internal image-reference" href="_images/python.png"><img alt="python osmapi" src="_images/python.png" style="width: 600px;" /></a>
+<p>La documentación del API se puede consultar en:</p>
+<p><a class="reference external" href="http://osmapi.metaodi.ch/">OsmApi</a></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Tabla de Contenidos</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introducción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="primitivas.html">2. Estructura de la información en OSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="descargaosm.html">3. Descarga de datos desde OpenStreetMap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="editorid.html">4. El Editor iD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="josm.html">5. JOSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qgis.html">6. QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overpassapi.html">7. Overpass API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="osm2shp.html">8. ogr2ogr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="osm4j.html">9. Osm4j</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">10. Python OsmApi</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="javascript.html">11. Javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mobileapps.html">12. Aplicaciones para dispositivos móviles</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Búsqueda</h3>
+            <form class="search" action="search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Ir a" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+            </form>
+            <p class="searchtip" style="font-size: 90%">
+                Introduzca los términos de búsqueda o un nombre de módulo, clase o función.
+            </p>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="osm4j.html" title="9. Osm4j"
+              >anterior</a> |
+            <a href="javascript.html" title="11. Javascript"
+              >siguiente</a> |
+            <a href="genindex.html" title="Índice General"
+              >índice</a>
+          </div>
+          <div role="note" aria-label="source link">
+              <br/>
+              <a href="_sources/python.txt"
+                rel="nofollow">Mostrar el código</a>
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, Santiago Higuera.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.5.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>3. Descarga de datos desde OpenStreetMap &mdash; documentación de Cayapas OSM - 1.0</title>
+    
+    <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="documentación de Cayapas OSM - 1.0" href="index.html" />
+    <link rel="next" title="4. El Editor iD" href="editorid.html" />
+    <link rel="prev" title="2. Estructura de la información en OSM" href="primitivas.html" /> 
+  </head>
+  <body role="document">
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="index.html">documentación de Cayapas OSM - 1.0</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="primitivas.html" title="2. Estructura de la información en OSM"
+             accesskey="P">anterior</a> |
+          <a href="editorid.html" title="4. El Editor iD"
+             accesskey="N">siguiente</a> |
+          <a href="genindex.html" title="Índice General"
+             accesskey="I">índice</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="descarga-de-datos-desde-openstreetmap">
+<h1>3. Descarga de datos desde OpenStreetMap<a class="headerlink" href="#descarga-de-datos-desde-openstreetmap" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Los Datos del mapa de OpenStreetMap, se pueden descargar de varias formas. El mapa entero son una enorme cantidad de datos (unos 50 Gb en formato comprimido). Se recomienda empezar con una región pequeña y determinada para asegurarse  que el proceso funciona correctamente.</p>
+<p>OpenStreetMap es un proyecto federativo. Esto significa que gran cantidad de sus recursos esenciales, son suministrados por terceras partes. Sea valiente, trate de descargar de estos lugares en primer lugar. Los servidores oficiales, no son grandes centros de datos y por lo tanto no disponen de grandes recursos. Se dedican principalmente a mantener el flujo de datos.</p>
+<div class="section" id="osm-file-formats">
+<h2>3.1. OSM File formats<a class="headerlink" href="#osm-file-formats" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>La información de OSM se puede obtener en diversos formatos. Los más importantes son:</p>
+<ul class="simple">
+<li>OSM XML – xml- es el formato proporcionado por la API</li>
+<li>PBF Format – es un formato binario comprimido</li>
+<li>o5m – es un formato binario para alta velocidad de proceso.</li>
+<li>OSM JSON – es una variante JSON para el formato OSM</li>
+<li>Level0L - un lenguaje más fácil de leer y con menos redundancia que el XML</li>
+</ul>
+<p>Se puede ampliar la información acerca de los formatos de datos utilizados por OSM en el siguiente enlace: <a class="reference external" href="http://wiki.openstreetmap.org/wiki/OSM_file_formats">OSM file formats</a></p>
+</div>
+<div class="section" id="planet-todos-los-datos-de-una-vez">
+<h2>3.2. Planet: Todos los datos de una vez<a class="headerlink" href="#planet-todos-los-datos-de-una-vez" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Planet.osm contiene todo el planeta. Es un archivo que se actualiza normalmente cada Miercoles. Son alrededor de 50 GB comprimidos.</p>
+<p>El histórico contiene todos los objetos con toda su información de modificaciones y es mucho más grande.</p>
+<p>Varios extractos permiten descargar archivos de tamaños más manejables, desde continentes enteros a partes de paises. Hay distintas herramientas que se pueden utilizar después para extraer datos específicos de estos archivos.</p>
+<p>Un portal donde se pueden conseguir conjuntos grandes de datos agrupados por continentes, países o provincias es <strong>Geofabrik</strong>. El enlace al portal de Geofabrik es:</p>
+<p><a class="reference external" href="http://www.geofabrik.de/">http://www.geofabrik.de/</a></p>
+<p><em>Geofabrik</em> ofrece los conjuntos de datos en formato <em>.osm</em> y también en formato <em>.shp</em>.</p>
+</div>
+<div class="section" id="pequenas-cantidades-de-datos">
+<h2>3.3. Pequeñas Cantidades de datos<a class="headerlink" href="#pequenas-cantidades-de-datos" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="api-de-openstreetmap">
+<h3>3.3.1. API de OpenStreetMap<a class="headerlink" href="#api-de-openstreetmap" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Existe una API que se puede utilizar para pequeñas descargas. Hay que tener en cuenta que el uso de la API (especialmente la descarga de zonas) está sujeta a una política de uso. No se recomienda utilizar directamente la API de <em>OSM</em>. Para descargas de zonas grandes (o respuestas a muchos usuarios a la vez) deben usarse alguno de los métodos que se señalan a continuación.</p>
+</div>
+<div class="section" id="directamente-desde-el-mapa">
+<h3>3.3.2. Directamente desde el mapa<a class="headerlink" href="#directamente-desde-el-mapa" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Para obtener los datos correspondientes a una zona pequeña se puede utilizar la pestaña <strong>Export</strong>, en la página principal de OpenStreetMap, se puede seleccionar un trozo del mapa y descargar datos en varios formatos, incluido <em>OSM XML</em>. Sólo funciona en niveles de zoom grandes.</p>
+</div>
+<div class="section" id="josm">
+<h3>3.3.3. JOSM<a class="headerlink" href="#josm" title="Enlazar permanentemente con este título">¶</a></h3>
+<p><strong>JOSM</strong> proporciona una interface amigable para la descarga de datos de un área determinada que desee visualizar de forma inmediata. Podrás editar estos datos y subirlos nuevamente. Podrás guardar los datos en un archivo en formato <em>.osm</em> para futuros procesos. Sin embargo, al emplear la API principal, no se pueden descargar áreas extensas con este método.</p>
+</div>
+<div class="section" id="qgis">
+<h3>3.3.4. QGIS<a class="headerlink" href="#qgis" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Las últimas versiones del programa GIS de escritorio <em>QGIS</em> ya incorporan un plugin que permite acceder a la descarga de los datos de OpenStreetMap de una determinada zona. Es una de las opciones más interesantes existentes a día de hoy.</p>
+</div>
+<div class="section" id="overpass-api">
+<h3>3.3.5. Overpass API<a class="headerlink" href="#overpass-api" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Overpass API permite descargar áreas determinadas, elementos con tags específicos, redes de transporte público, redes fluviales o cualquier otro tipo de entidad. Esta descarga selectiva de determinados elementos dentro del area de interés, hace que estas herramientas sean muy interesantes.</p>
+</div>
+<div class="section" id="desde-lenguajes-de-programacion">
+<h3>3.3.6. Desde lenguajes de programación<a class="headerlink" href="#desde-lenguajes-de-programacion" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>La utilización de datos de <em>OSM</em> en nuestros programas es posible accediendo directamente a descargas de datos desde distintos servidores. Existen interfaces específicos para distintos lenguajes como <em>Java</em>, <em>Python</em> o <em>Javascript</em>. También es posible utilizar peticiones HTTP genericas a través de Overpass API y procesar los datos obtenidos por nuestros medios.</p>
+</div>
+</div>
+<div class="section" id="elegir-la-region-de-descarga">
+<h2>3.4. Elegir la Región de descarga<a class="headerlink" href="#elegir-la-region-de-descarga" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>La región se especifica mediante un area rectangular que se denomina <em>bounding box</em>. Para definir el <em>bounding box</em> se dan las coordenadas de la esquina inferior izquierda y la esquina superior derecha, que corresponden a los valores máximos y mínimos de la longitud y latitud de la zona rectangular.</p>
+<p>Hay que elegir la región más pequeña posible que sea de utilidad, ya que regiones más grandes generan archivos mayores, mayores tiempo de descarga y ocupación del servidor.</p>
+<p>Cuando se está empezando, es mejor empezar por regiones pequeñas para entender como funciona con pequeños conjuntos de datos.</p>
+<p>Hay varias formas en encontrar los valores de latitud y longitud. Si está interesado en una zona en concreto, quizás la forma más clara de ver esto, es desde la página principal del mapa. Iniciada sesión con nuestra cuenta, haremos zoom y encuadre hasta tener en pantalla la zona en la que estamos interesados. Al pulsar la pestaña <em>EXPORTAR</em>, aparece una caja con los cuatro valores que definen la extensión del área de descarga y que coincide exactamente con lo que estas viendo en pantalla del mapa en ese momento.</p>
+<p>Si la descarga la vamos a hacer directamente desde el mapa, podemos en ese momento hacer <em>Click</em> en &#8216;<em>Seleccionar manualmente un área diferente</em>&#8216; y entones dibujar un área para seleccionar exactamente la región deseada.</p>
+<p>Otra manera de localizar las coordenadas de la zona que queremos descargar es abrir la página Web <a class="reference external" href="http://www.informationfreeway.org/">http://www.informationfreeway.org/</a> y hacer zoom a la zona de interés. En la parte inferior derecha de la pantalla aparecen las coordenadas correspondientes a&#8217;la posición del ratón. Se tratará de anotar las correspondientes a las esquinas del area en el que estemos interesados.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Tabla de Contenidos</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introducción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="primitivas.html">2. Estructura de la información en OSM</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">3. Descarga de datos desde OpenStreetMap</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="editorid.html">4. El Editor iD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="josm.html">5. JOSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qgis.html">6. QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overpassapi.html">7. Overpass API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="osm2shp.html">8. ogr2ogr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="osm4j.html">9. Osm4j</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">10. Python OsmApi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="javascript.html">11. Javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mobileapps.html">12. Aplicaciones para dispositivos móviles</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Búsqueda</h3>
+            <form class="search" action="search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Ir a" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+            </form>
+            <p class="searchtip" style="font-size: 90%">
+                Introduzca los términos de búsqueda o un nombre de módulo, clase o función.
+            </p>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="primitivas.html" title="2. Estructura de la información en OSM"
+              >anterior</a> |
+            <a href="editorid.html" title="4. El Editor iD"
+              >siguiente</a> |
+            <a href="genindex.html" title="Índice General"
+              >índice</a>
+          </div>
+          <div role="note" aria-label="source link">
+              <br/>
+              <a href="_sources/descargaosm.txt"
+                rel="nofollow">Mostrar el código</a>
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, Santiago Higuera.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.5.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>1. Introducción &mdash; documentación de Cayapas OSM - 1.0</title>
+    
+    <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="documentación de Cayapas OSM - 1.0" href="index.html" />
+    <link rel="next" title="2. Estructura de la información en OSM" href="primitivas.html" />
+    <link rel="prev" title="Descarga y utilización de datos de OpenStreetMap" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="index.html">documentación de Cayapas OSM - 1.0</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="index.html" title="Descarga y utilización de datos de OpenStreetMap"
+             accesskey="P">anterior</a> |
+          <a href="primitivas.html" title="2. Estructura de la información en OSM"
+             accesskey="N">siguiente</a> |
+          <a href="genindex.html" title="Índice General"
+             accesskey="I">índice</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="introduccion">
+<h1>1. Introducción<a class="headerlink" href="#introduccion" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>OpenStreetMap, OSM, es la mayor base de datos geográfica de libre acceso que existe. Comenzó su andadura en 2004 de la mano de Steve Coast. La información la introducen y mantienen actualizada usuarios voluntarios de todo el mundo. Toda la información de la base de datos es de libre acceso y utilización. A la fecha de escribir estas notas había más de dos millones y medio de usuarios registrados y el volumen de información almacenado era de unos 50 Gigabytes en formato comprimido. Por ejemplo, el número de nodos almacenados a la fecha era de unos 3.350 mil millones.</p>
+<a class="reference internal image-reference" href="_images/users.png"><img alt="osm users" class="align-center" src="_images/users.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="_images/nodes.png"><img alt="osm nodes" class="align-center" src="_images/nodes.png" style="width: 600px;" /></a>
+<div class="section" id="flujo-de-trabajo-en-la-descarga-y-utilizacion-de-datos-osm">
+<h2>1.1. Flujo de trabajo en la descarga y utilización de datos OSM<a class="headerlink" href="#flujo-de-trabajo-en-la-descarga-y-utilizacion-de-datos-osm" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El flujo de trabajo con datos procedentes de OpenStreetMap suele seguir las siguientes fases (ver figura ):</p>
+<ul class="simple">
+<li>1.- <strong>Descarga de datos brutos de OSM</strong>: en primer lugar se trata de obtener los datos existentes en la base de datos de OpenStreetMap correspondientes a la zona que estemos estudiando. Normalmente se obtienen todos los datos de una determinada zona en algunos de los formatos que nos ofrece OSM. El más habitual es el formato <em>.osm</em>, que es un formatos <em>XML</em>.</li>
+<li>2.- <strong>Procesamiento de datos brutos y extracción de los elementos de interés</strong>: Habrá que extraer de los ficheros obtenidos de la base de datos, los elementos en los que estemos interesados. Si por ejemplo estamos haciendo un estudio acerca de las carreteras de una zona, habrá que extraer todos los elementos del tipo <em>Node, Way</em> o <em>Relation</em> que tengan información acerca de las carreteras.</li>
+<li>3.- <strong>Conversión a otros formatos vectoriales</strong>: normalmente trabajaremos en un programa GIS o conuna base de datos. Los datos que nos interesan y que hemos extraido en la fase anterior habrá que convertirlos al formato en el que tengamos pensado trabajar. Puede ser un formato vectorial como el <em>shapefile</em> o quizás haya que importarlos desde la base de datos con la que pensemos hacer el análisis.</li>
+<li>4.- <strong>Procesamiento y cálculos</strong>: una vez se dispone de los datos en nuestro formato de trabajo, realizaremos los cálculos y operaciones de análisis espacial que nos interesen.</li>
+<li>5.- <strong>Salida gráfica o alfanumérica de los resultados</strong>: por último, habra que plasmar los resultados de nuestro trabajo en forma gráfica o mediante los informes correspondientes.</li>
+</ul>
+<a class="reference internal image-reference" href="_images/esquema.png"><img alt="flujo detrabajo" class="align-center" src="_images/esquema.png" style="width: 400px;" /></a>
+<p>A día de hoy hay muchas herramientas que pueden ser utilizadas en cada una de las fases descritas. En este taller vamos a dar algunas ideas de cómo utilizar algunas de ellas. Existen en la red numerosos documentos que han servido para la preparación de esta documentación y que pueden ser consultadas para ampliar la información que aquí se explica.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Tabla de Contenidos</h3>
+          <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">1. Introducción</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="primitivas.html">2. Estructura de la información en OSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="descargaosm.html">3. Descarga de datos desde OpenStreetMap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="editorid.html">4. El Editor iD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="josm.html">5. JOSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qgis.html">6. QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overpassapi.html">7. Overpass API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="osm2shp.html">8. ogr2ogr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="osm4j.html">9. Osm4j</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">10. Python OsmApi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="javascript.html">11. Javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mobileapps.html">12. Aplicaciones para dispositivos móviles</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Búsqueda</h3>
+            <form class="search" action="search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Ir a" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+            </form>
+            <p class="searchtip" style="font-size: 90%">
+                Introduzca los términos de búsqueda o un nombre de módulo, clase o función.
+            </p>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="index.html" title="Descarga y utilización de datos de OpenStreetMap"
+              >anterior</a> |
+            <a href="primitivas.html" title="2. Estructura de la información en OSM"
+              >siguiente</a> |
+            <a href="genindex.html" title="Índice General"
+              >índice</a>
+          </div>
+          <div role="note" aria-label="source link">
+              <br/>
+              <a href="_sources/intro.txt"
+                rel="nofollow">Mostrar el código</a>
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, Santiago Higuera.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.5.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

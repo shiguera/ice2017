@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>11. Javascript &mdash; documentación de Cayapas OSM - 1.0</title>
+    
+    <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="documentación de Cayapas OSM - 1.0" href="index.html" />
+    <link rel="next" title="12. Aplicaciones para dispositivos móviles" href="mobileapps.html" />
+    <link rel="prev" title="10. Python OsmApi" href="python.html" /> 
+  </head>
+  <body role="document">
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="index.html">documentación de Cayapas OSM - 1.0</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="python.html" title="10. Python OsmApi"
+             accesskey="P">anterior</a> |
+          <a href="mobileapps.html" title="12. Aplicaciones para dispositivos móviles"
+             accesskey="N">siguiente</a> |
+          <a href="genindex.html" title="Índice General"
+             accesskey="I">índice</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="javascript">
+<h1>11. Javascript<a class="headerlink" href="#javascript" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Las librerías <em>Openlayers</em> y <em>Leaflet</em> tienen la posiblidad de trabajar con datos procedentes de OpenStreetMap, tanto en formato Raster como en formato vectorial.</p>
+<div class="section" id="openlayers">
+<h2>11.1. OpenLayers<a class="headerlink" href="#openlayers" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El wiki deOpenStreetMap ofrece ejemplos sencillos de consultas en OpenLayers. Puedes consultar la siguiente dirección:</p>
+<p><a class="reference external" href="http://wiki.openstreetmap.org/wiki/OpenLayers_Simple_Example">http://wiki.openstreetmap.org/wiki/OpenLayers_Simple_Example</a></p>
+<p>La documentación de OpenLayers 3 ofrece un buen ejemplo de consulta de datos vectoriales con OpenLayers 3. Se puede consultar en lasiguiente dirección:</p>
+<p><a class="reference external" href="http://openlayers.org/en/latest/examples/vector-osm.html">http://openlayers.org/en/latest/examples/vector-osm.html</a></p>
+<p>Para ejemplos más complejos una buena forma de aprender es realizar la correspondiente consulta <em>Overpass API</em> en la página <a class="reference external" href="http://overpass-api.de/query_form.html">http://overpass-api.de/query_form.html</a> y pedirle que nos dé la salida en OpenLayers. Sobre dicha salida podemos examinar el código fuente para comprender los conceptos y librerías utilizadas. Un ejemplo podría ser:</p>
+<p><a class="reference external" href="http://overpass-api.de/api/convert?data=%28node%2841.9837%2C2.8243%2C41.9866%2C2.8307%29%5Bamenity%3Drestaurant%5D%3Bnode%2841.9837%2C2.8243%2C41.9866%2C2.8307%29%5Bamenity%3Dpub%5D%29%3Bout%3B&amp;target=ol_fixed">http://overpass-api.de/api/convert?data=%28node%2841.9837%2C2.8243%2C41.9866%2C2.8307%29%5Bamenity%3Drestaurant%5D%3Bnode%2841.9837%2C2.8243%2C41.9866%2C2.8307%29%5Bamenity%3Dpub%5D%29%3Bout%3B&amp;target=ol_fixed</a></p>
+<a class="reference internal image-reference" href="_images/openlayers.png"><img alt="openlayers" src="_images/openlayers.png" style="width: 600px;" /></a>
+</div>
+<div class="section" id="leaflet">
+<h2>11.2. Leaflet<a class="headerlink" href="#leaflet" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>La siguiente página de Mapbox ofrece un ejemplo para descargar datos vectoriales de OpenStreetMap:</p>
+<p><a class="reference external" href="https://www.mapbox.com/mapbox.js/example/v1.0.0/leaflet-osm/">https://www.mapbox.com/mapbox.js/example/v1.0.0/leaflet-osm/</a></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Tabla de Contenidos</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introducción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="primitivas.html">2. Estructura de la información en OSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="descargaosm.html">3. Descarga de datos desde OpenStreetMap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="editorid.html">4. El Editor iD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="josm.html">5. JOSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qgis.html">6. QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overpassapi.html">7. Overpass API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="osm2shp.html">8. ogr2ogr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="osm4j.html">9. Osm4j</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">10. Python OsmApi</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">11. Javascript</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mobileapps.html">12. Aplicaciones para dispositivos móviles</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Búsqueda</h3>
+            <form class="search" action="search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Ir a" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+            </form>
+            <p class="searchtip" style="font-size: 90%">
+                Introduzca los términos de búsqueda o un nombre de módulo, clase o función.
+            </p>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="python.html" title="10. Python OsmApi"
+              >anterior</a> |
+            <a href="mobileapps.html" title="12. Aplicaciones para dispositivos móviles"
+              >siguiente</a> |
+            <a href="genindex.html" title="Índice General"
+              >índice</a>
+          </div>
+          <div role="note" aria-label="source link">
+              <br/>
+              <a href="_sources/javascript.txt"
+                rel="nofollow">Mostrar el código</a>
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, Santiago Higuera.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.5.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>
