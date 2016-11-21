@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Cayapas</title>
+		<title>ICE OSM</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/white.css">
@@ -27,18 +27,20 @@
 
 				<!-- 1.- Portada -->
 				<section>
-					<div>
-						<img src="img/poblado.jpg" alt='poblado' width='600px'>
+					<div style='float:left; margin-right: 20px'>
+						<img src="img/icelogo.png" alt='icelogo' width='400px'>
 					</div>
+					<div style='float:right; margin-left: 20px'>
+						<img src="img/icelogo_2.png" alt='icelogo' width='200px'>
+					</div>
+					<div style='clear: both'></div>
 					<div style='margin-top: 20px'>
 						<h2 style='color:#ff8c00'>Curso de OpenStreetMap</h2>
-						<h3 style='color:#ff8c00'>Digital humanitarians</h3>
-						<h3>Cayapa pi chulla kumani España</h3>
-						<h3>Asociación Amigos del Cayapas</h3>
+						<h3 style='color:#ff8c00'>Descarga y utilización de datos OSM</h3>
 					</div>
 					<br/>
 					<div style='clear:both; margin-top: 10px'>
-					<a href='http://mercatorlab.com/geoinquietos/cayapas'>http://mercatorlab.com/geoinquietos/cayapas</a>
+					<a href='http://mercatorlab.com/ice2016'>http://mercatorlab.com/ice2016</a>
 						<p><small>by <a href="https://twitter.com/santiagohiguera">@SantiagoHiguera</a></small></p>	
 					</div>
 				</section>
@@ -86,23 +88,19 @@
 						<ul>
 							<li style='color:#ff8c00; font-weight: bold'>Día 1</li>
 							<ul>
-								<li>Modelo de datos de OSM</li>
-								<li>Edición con Id</li>
-								<li>Edición con JOSM</li>
+								<li>Introducción</li>
+								<li>Estructura de la información en OSM</li>
+								<li>Edición con ID y JOSM</li>
+								<li>Procedimientos para descarga de datos</li>
+								<li>Utilización de QGIS con OpenStreetMap (I)</li>
 							</ul>
 							<li style='color:#ff8c00; font-weight: bold'>Día 2</li>
 								<ul>
-									<li>HOSM: Humanitariam OpenStreetMap</li>
-									<li>Utilización de QGIS</li>
+									<li>Utilización de QGIS con OpenStreetMap (II)</li>
+									<li>Conversión a formatos Shapefile y de bases de datos</li>
+									<li>Consultas selectivas con Overpass API</li>
+									<li>Acceso mediante lenguajes de datos</li>
 								</ul>
-							<li style='color:#ff8c00; font-weight: bold'>Día 3</li>
-								<ul>
-									<li>Mapeado con apps móviles</li>
-									<li>Mapas manuales</li>
-									<li>Añadir mapas raster a JOSM</li>	
-								</ul>					
-						</ul>
-
        		</section>
 
        		<!-- Enlaces a la documentación -->
@@ -110,21 +108,52 @@
        		<div style='padding: 10px'>
        			<h2>Enlaces a la documentación</h2>
               <ul>
-              	<li><a href="http://mercatorlab.com/geoinquietos/cayapas" target='_blank'>http://mercatorlab.com/geoinquietos/cayapas</a></li>
-	              <li><a href="http://cayapas.readthedocs.io" target='_blank'>http://cayapas.readthedocs.io</a></li>
+              	<li><a href="http://mercatorlab.com/ice2016" target='_blank'>http://mercatorlab.com/ice2016</a></li>
+	              <li><a href="http://iceosm2016.readthedocs.io" target='_blank'>http://iceosm2016.readthedocs.io</a></li>
               </ul>
            </div>
            <div style='padding: 10px; margin-top: 10px'>
              <h2>Exportar la documentación como pdf</h2>
 							<ul>
-              	<li><a href="http://mercatorlab.com/geoinquietos/cayapas?print-pdf" target='_blank'>http://mercatorlab.com/geoinquietos/cayapas?print-pdf</a></li>
+              	<li><a href="http://mercatorlab.com/ice2016?print-pdf" target='_blank'>http://mercatorlab.com/ice2016?print-pdf</a></li>
               	<p>A continuación ordenar <span style='font-style: italic; font-weight: bold'> imprimir la página como pdf</span></p>
-	              <li><a href="http://cayapas.readthedocs.io" target='_blank'>http://cayapas.readthedocs.io</a></li>
+	              <li><a href="http://iceosm2016.readthedocs.io" target='_blank'>http://iceosm2016.readthedocs.io</a></li>
 	              <p>Tiene un botón abajo a la derecha para exportar en distintos formatos</p>
               </ul>
 						</div>
        		</section>
 				
+
+				<!-- 2.- ¿Qué es OpenStreetMap? -->
+				<section>
+					<h2>¿Qué es OpenStreetMap?</h2>
+					<br>
+					<p><strong>OpenStreetMap</strong> es una base de datos de información geográfica creada y mantenida de forma voluntaria y colaborativa por una creciente comunidad de entusiastas de los mapas.</p>
+					<br/>
+					<p>Los datos contenidos en las bases de datos de <strong>OpenStreetMap</strong> son de acceso libre y gratuito.</p>
+				</section>
+
+				<!-- ¿Cómo se accede a OpenStreetMap? -->
+				<section>
+					<h2>¿Cómo se accede a OpenStreetMap?</h2>
+					<p>
+						A través del navegador web, en la dirección:<br/>
+					<center><a href="http://openstreetmap.org">openstreetmap.org</a></center>
+					</p>
+					<iframe width="900" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=-3.688230514526367%2C40.47847180834595%2C-3.6628246307373047%2C40.48960233733643&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="http://www.openstreetmap.org/#map=16/40.4840/-3.6755">Ver mapa más grande</a></small>
+				</section>
+
+          <!-- Vídeo decimo aniversario -->
+         <section>
+         	<h2>OSM 10th Year Anniversary</h2>
+         	<iframe width="1120" height="630" src="https://www.youtube.com/embed/7sC83j6vzjo" frameborder="0" allowfullscreen></iframe>
+         </section>
+
+				<section>
+					<h3>HOTOSM: Humanitariam OpenStreetMap Team</h3>
+					<img src='img/hotosm.png' />
+					<a href='https://hotosm.org/' target='_blank'>https://hotosm.org/</a>
+				</section>
 
 				<section>
 					<h3>"Mapping support during the early phases of a response is critical, as responders and donors try to more clearly understand the situation on the ground"</h3>
@@ -138,6 +167,7 @@
 					<br/>
 					<h3>First responders lack the information to make valuable decisions regarding relief efforts</h3>
 				</section>
+
 
 				<section>
 					<h3>Terremoto en Haiti, enero 2010</h3>
@@ -156,25 +186,6 @@
 					<img src='img/osm_pap_after_quake.jpg' width='700' />
 					<a href='http://www.openstreetmap.org/#map=15/18.5637/-72.3118' target='_blank'>http://www.openstreetmap.org/#map=15/18.5637/-72.3118</a><br/>
 					<a href='http://tools.geofabrik.de/mc/#15/18.5702/-72.3025&num=2&mt0=mapnik&mt1=google-map' target='_blank'>Map Compare</a>
-				</section>
-
-				<section>
-					<img src='img/ushahidi_1.png' width='400'/>
-					<h3>Ushahidi = Testigo en Swahili</h3>
-					<img src='img/ushahidi_2.png' width='600'/><br/>
-					<a href='https://www.ushahidi.com/'>https://www.ushahidi.com/</a>
-				</section>
-
-				<section>
-					<h3>Missing maps</h3>
-					<img src='img/missingmaps.png' />
-					<a href='http://www.missingmaps.org/' target='_blank'>http://www.missingmaps.org/</a>
-				</section>
-
-				<section>
-					<h3>HOTOSM: Humanitariam OpenStreetMap Team</h3>
-					<img src='img/hotosm.png' />
-					<a href='https://hotosm.org/' target='_blank'>https://hotosm.org/</a>
 				</section>
 
 				<section>
@@ -198,20 +209,86 @@
 					<a href='http://pierzen.dev.openstreetmap.org/hot/leaflet/OSM-Compare-before-after.html#14/0.0738/279.9578' target='_blank' > Map Compare</a>
 				</section>
 
-				<!-- 2.- ¿Qué es OpenStreetMap? -->
+
+
+				<!-- 6.- Darse de alta como usuario -->
 				<section>
-					<h2>¿Qué es OpenStreetMap?</h2>
-					<br>
-					<p><strong>OpenStreetMap</strong> es una base de datos de información geográfica creada y mantenida de forma voluntaria y colaborativa por una creciente comunidad de entusiastas de los mapas.</p>
-					<br/>
-					<p>Los datos contenidos en las bases de datos de <strong>OpenStreetMap</strong> son de acceso libre y gratuito.</p>
+					<h2>Darse de alta como usuario registrado de OpenStreetMap</h2>
+					<p>Para poder editar los mapas es necesario registrarse como usuario</p>
+					<a class="image" href="http://openstreetmap.org/" target="_blank">
+						<img width="1030" src="img/alta.png" alt="josm">
+					</a>
 				</section>
 
-          <!-- Vídeo decimo aniversario -->
-         <section>
-         	<h2>OSM 10th Year Anniversary</h2>
-         	<iframe width="1120" height="630" src="https://www.youtube.com/embed/7sC83j6vzjo" frameborder="0" allowfullscreen></iframe>
-         </section>
+				<!-- Lista de correo enespañol -->
+				<section>
+					<h2>Lista de correo en español de OpenStreetMap</h2>
+					<p><a href="https://lists.openstreetmap.org/listinfo/talk-es">https://lists.openstreetmap.org/listinfo/talk-es</a></p>
+					<a class="image" href="https://lists.openstreetmap.org/listinfo/talk-es" target="_blank"><img width="1030" src="img/osmmail.png" alt="josm"></a>
+				</section>
+
+				<!-- Quién hace OpenStreetMap? -->
+				<section>
+					<h2>¿Quién ha hecho OpenStreetMap?</h2>
+					<p>2.5 millones de usuarios registrados</p>
+					<p>3.312 millones de nodos</p>
+					<div>
+						<img src="img/users.png" alt='users' width='530' style='float:left; margin-right: 20px'>
+						<img src="img/nodes.png" alt='nodes' width='530' style='float:left'>
+					</div>
+					<a href="http://wiki.openstreetmap.org/wiki/Stats" target="_blank" style='clear: both'>OpenStreetMap Stats</a>
+				</section>
+				
+				<section>
+					<h3>¿Quién hace OpenStreetMap ahora en España?</h3>
+					<a href="http://osmstats.neis-one.org/?item=countries&country=Spain" target="_blank">http://osmstats.neis-one.org/?item=countries&country=Spain</a>
+					<iframe width="1100" height='590' frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://osmstats.neis-one.org/?item=countries&country=Spain" style="border: 1px solid black"></iframe>
+				</section>
+				
+				<section>
+					<h2>¿Quién hizo OpenStreetMap en 2015?</h2>
+					<p>
+						OpenStreetMap está construido con las aportaciones de miles de voluntarios
+						repartidos por todo el mundo. El vídeo muestra las cotribuciones en África entre 2013 y 2015
+					</p>
+					<iframe width="840" height="473" src="https://www.youtube.com/embed/4sEeFhO07Ts" frameborder="0" allowfullscreen></iframe>
+				</section>
+				
+				<section>
+					<h2>OpenStreetMap Time Lapse of Electricity Grid Edits</h2>
+					<a href="https://www.youtube.com/watch?v=_TgQbmWOPHA">https://www.youtube.com/watch?v=_TgQbmWOPHA/</a>
+					<iframe width="840" height="473" src="https://www.youtube.com/embed/_TgQbmWOPHA" frameborder="0" allowfullscreen></iframe>
+				</section>
+				
+				<section>
+					<h3>¿Quién hace OpenStreetMap ahora?</h3>
+					<a href="http://osmlab.github.io/show-me-the-way/" target="_blank">http://osmlab.github.io/show-me-the-way/</a>
+					<iframe width="1100" height='590' frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://osmlab.github.io/show-me-the-way/" style="border: 1px solid black"></iframe>
+				</section>
+
+				<!-- ¿Cómo se financia OpenStreetMap? -->
+				<section>
+					<h2>¿Cómo se financia OpenStreetMap</h2>
+					<p>
+						El mantenimiento de servidores y redes de comunicación en base a donaciones voluntarias de particulares y empresas
+					</p>
+					<a href="http://donate.openstreetmap.org/" target="_blank">http://donate.openstreetmap.org/</a>
+					<div>
+						<a class="image" href="http://donate.openstreetmap.org/" target="_blank">
+							<img width="550" src="img/support.png" alt="openstreetmap.org">
+						</a>
+					</div>
+				</section>
+
+
+				<!-- Componentes de OpenStreetMap -->
+				<section>
+					<h2>Componentes de OpenStreetMap</h2>
+					<a class="image" href="http://wiki.openstreetmap.org/wiki/Component_overview" target="_blank">
+						<img width="900" src="img/OSM_Components.png" alt="josm">
+					</a>
+				</section>
+
 
 				<!-- Componentes de la información geográfica -->
 				<section>
@@ -324,23 +401,7 @@ maxspeed=60
 					</div>
 				</section>
 
-				<!-- Componentes de OpenStreetMap -->
-				<section>
-					<h2>Componentes de OpenStreetMap</h2>
-					<a class="image" href="http://wiki.openstreetmap.org/wiki/Component_overview" target="_blank">
-						<img width="900" src="img/OSM_Components.png" alt="josm">
-					</a>
-				</section>
 
-				<!-- ¿Cómo se accede a OpenStreetMap? -->
-				<section>
-					<h2>¿Cómo se accede a OpenStreetMap?</h2>
-					<p>
-						A través del navegador web, en la dirección:<br/>
-					<center><a href="http://openstreetmap.org">openstreetmap.org</a></center>
-					</p>
-					<iframe width="900" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=-3.688230514526367%2C40.47847180834595%2C-3.6628246307373047%2C40.48960233733643&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="http://www.openstreetmap.org/#map=16/40.4840/-3.6755">Ver mapa más grande</a></small>
-				</section>
 				<section>
 					<h2>Controles del mapa OpenStreetMap</h2>
 					<h3>Capa visible</h3>
@@ -362,80 +423,31 @@ maxspeed=60
 					<img width="1000" src="img/osmedit.png" alt="osmedit">
 				</section>
 
-				<!-- 6.- Darse de alta como usuario -->
-				<section>
-					<h2>Darse de alta como usuario registrado de OpenStreetMap</h2>
-					<p>Para poder editar los mapas es necesario registrarse como usuario</p>
-					<a class="image" href="http://openstreetmap.org/" target="_blank">
-						<img width="1030" src="img/alta.png" alt="josm">
-					</a>
-				</section>
-
-				<!-- Lista de correo enespañol -->
-				<section>
-					<h2>Lista de correo en español de OpenStreetMap</h2>
-					<p><a href="https://lists.openstreetmap.org/listinfo/talk-es">https://lists.openstreetmap.org/listinfo/talk-es</a></p>
-					<a class="image" href="https://lists.openstreetmap.org/listinfo/talk-es" target="_blank"><img width="1030" src="img/osmmail.png" alt="josm"></a>
-				</section>
-
-				<!-- Quién hace OpenStreetMap? -->
-				<section>
-					<h2>¿Quién ha hecho OpenStreetMap?</h2>
-					<p>2.5 millones de usuarios registrados</p>
-					<p>3.312 millones de nodos</p>
-					<div>
-						<img src="img/users.png" alt='users' width='530' style='float:left; margin-right: 20px'>
-						<img src="img/nodes.png" alt='nodes' width='530' style='float:left'>
-					</div>
-					<a href="http://wiki.openstreetmap.org/wiki/Stats" target="_blank" style='clear: both'>OpenStreetMap Stats</a>
-				</section>
-				
-				<section>
-					<h3>¿Quién hace OpenStreetMap ahora en España?</h3>
-					<a href="http://osmstats.neis-one.org/?item=countries&country=Spain" target="_blank">http://osmstats.neis-one.org/?item=countries&country=Spain</a>
-					<iframe width="1100" height='590' frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://osmstats.neis-one.org/?item=countries&country=Spain" style="border: 1px solid black"></iframe>
-				</section>
-				
-				<section>
-					<h2>¿Quién hizo OpenStreetMap en 2015?</h2>
-					<p>
-						OpenStreetMap está construido con las aportaciones de miles de voluntarios
-						repartidos por todo el mundo. El vídeo muestra las cotribuciones en África entre 2013 y 2015
-					</p>
-					<iframe width="840" height="473" src="https://www.youtube.com/embed/4sEeFhO07Ts" frameborder="0" allowfullscreen></iframe>
-				</section>
-				
-				<section>
-					<h2>OpenStreetMap Time Lapse of Electricity Grid Edits</h2>
-					<a href="https://www.youtube.com/watch?v=_TgQbmWOPHA">https://www.youtube.com/watch?v=_TgQbmWOPHA/</a>
-					<iframe width="840" height="473" src="https://www.youtube.com/embed/_TgQbmWOPHA" frameborder="0" allowfullscreen></iframe>
-				</section>
-				
-				<section>
-					<h3>¿Quién hace OpenStreetMap ahora?</h3>
-					<a href="http://osmlab.github.io/show-me-the-way/" target="_blank">http://osmlab.github.io/show-me-the-way/</a>
-					<iframe width="1100" height='590' frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://osmlab.github.io/show-me-the-way/" style="border: 1px solid black"></iframe>
-				</section>
-
-				<!-- ¿Cómo se financia OpenStreetMap? -->
-				<section>
-					<h2>¿Cómo se financia OpenStreetMap</h2>
-					<p>
-						El mantenimiento de servidores y redes de comunicación en base a donaciones voluntarias de particulares y empresas
-					</p>
-					<a href="http://donate.openstreetmap.org/" target="_blank">http://donate.openstreetmap.org/</a>
-					<div>
-						<a class="image" href="http://donate.openstreetmap.org/" target="_blank">
-							<img width="550" src="img/support.png" alt="openstreetmap.org">
-						</a>
-					</div>
-				</section>
 
 				<!-- Material de apredizaje -->
 				<section>
-					<h2>Material de aprendizaje</h2>
-					<a href="http://learnosm.org">http://learnosm.org</a><br>
+					<h2>Material de aprendizaje: WIKI Spain</h2>
+					<a href="http://wiki.openstreetmap.org/wiki/WikiProject_Spain" target='_blank'>http://wiki.openstreetmap.org/wiki/WikiProject_Spain</a><br>
+					<img src="img/wikispain.png" alt='wikispain' width='1050'>
+				</section>
+
+				<section>
+					<h2>Material de aprendizaje: Learn OSM</h2>
+					<a href="http://learnosm.org" target='_blank'>http://learnosm.org</a><br>
 					<img src="img/learnosm.png" alt='learnosm' width='1050'>
+				</section>
+
+				<section>
+					<h3>HOTOSM: Material de aprendizaje - MapGive</h3>
+					<a href='http://mapgive.state.gov/learn-to-map/' target='_blank'>http://mapgive.state.gov/learn-to-map/</a>
+					<img src="img/mapgive.png" alt='mapgive' width='650' style='float: left; margin-right: 10px'>
+					<img src="img/kenya.png" alt='mapgive' width='300' style='float: left; margin-left: 10px'>
+				</section>
+
+				<section>
+					<h3>HOTOSM: Material de aprendizaje</h3>
+					<small><a href="https://www.youtube.com/watch?v=HvH02nwB_X4&feature=youtu.be" target='_blank'>https://www.youtube.com/watch?v=HvH02nwB_X4&feature=youtu.be</a></small>
+					<iframe width="554" height="415" src="https://www.youtube.com/embed/HvH02nwB_X4" frameborder="0" allowfullscreen></iframe>
 				</section>
 
 				<!-- Material de apredizaje: Libros -->
@@ -447,6 +459,7 @@ maxspeed=60
 						<img src="img/osmbook3.jpg" alt='osmbook1' width='360' style='float: left;'>
 					</div>
 				</section>
+
 
 				<!-- Mapear es fácil, ¿o no? -->
 				<section>
@@ -477,17 +490,9 @@ maxspeed=60
 				<section>
 						<h2>Editor ID: Usar ortofotos PNOA</h2>
 						<p>En España, para calcar, es mejor utilizar las ortofotos del PNOA. Hay que abrir el botón de
-						capas, seleccionar 'personalizada' y meter la siguiente URL</p>
-						<h5 style='color:#a000d0'>http://www.ign.es/wmts/pnoa-ma?request=GetTile&<br/>
-						service=WMTS&<br/>
-						VERSION=1.0.0&<br/>
-						Layer=OI.OrthoimageCoverage&<br/>
-						Style=default&<br/>
-						Format=image/png&<br/>
-						TileMatrixSet=GoogleMapsCompatible&<br/>
-						TileMatrix={z}&<br/>
-						TileRow={y}&<br/>
-						TileCol={x}</h6>
+						capas y seleccionar la capa del PNOA</p>
+						<img width="880" src="img/accesopnoa.png" />
+						
 				</section>
 
 				<!-- Editar OpenStreetMap con JOSM -->
@@ -550,8 +555,8 @@ maxspeed=60
 				<!-- <!-- Geofabrik tools: Map Compare -->
 				<section>
 					<h2>Geofabrik tools: Map Compare</h2>
-					<a href="http://tools.geofabrik.de/mc/">http://tools.geofabrik.de/mc/</a>
-					<iframe width="1025" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://tools.geofabrik.de/mc/#14/9.5529/1.1934&num=2&mt0=mapnik&mt1=google-map" style="border: 1px solid black"></iframe>
+					<a href="http://tools.geofabrik.de/mc/#15/9.5391/1.1925&num=2&mt0=mapnik&mt1=google-map">http://tools.geofabrik.de/mc/</a>
+					<iframe width="1025" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://tools.geofabrik.de/mc/#15/9.5391/1.1925&num=2&mt0=mapnik&mt1=google-map" style="border: 1px solid black"></iframe>
 				</section>
 
 				<!-- <!-- Geofabrik tools: OSM INspector -->
@@ -566,26 +571,6 @@ maxspeed=60
 						<a href="http://nominatim.openstreetmap.org/">http://nominatim.openstreetmap.org/</a>
 					</p>
 					<img src='img/nominatim.png' alt='nominatim' width='800'>
-				</section>
-
-				<!-- HOT -->
-				<section>
-					<h3>HOT: Humanitariam OpenStreetMap Team</h3>
-					<p>The Humanitarian OpenStreetMap Team [HOT] applies the principles of open source and open data sharing for humanitarian response and economic development.</p>
-					<img src="img/hot.png" alt='hot' width='750'>
-				</section>
-
-				<section>
-					<h3>Material de aprendizaje: MapGive</h3>
-					<a href='http://mapgive.state.gov/learn-to-map/' target='_blank'>http://mapgive.state.gov/learn-to-map/</a>
-					<img src="img/mapgive.png" alt='mapgive' width='650' style='float: left; margin-right: 10px'>
-					<img src="img/kenya.png" alt='mapgive' width='300' style='float: left; margin-left: 10px'>
-				</section>
-
-				<section>
-					<h3>HOT: Material de aprendizaje</h3>
-					<small><a href="https://www.youtube.com/watch?v=HvH02nwB_X4&feature=youtu.be">https://www.youtube.com/watch?v=HvH02nwB_X4&feature=youtu.be</a></small>
-					<iframe width="554" height="415" src="https://www.youtube.com/embed/HvH02nwB_X4" frameborder="0" allowfullscreen></iframe>
 				</section>
 
 				<section>

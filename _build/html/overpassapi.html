@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>7. Overpass API &mdash; documentación de Cayapas OSM - 1.0</title>
+    <title>8. Overpass API &mdash; documentación de Cayapas OSM - 1.0</title>
     
     <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -25,8 +25,8 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
     <link rel="top" title="documentación de Cayapas OSM - 1.0" href="index.html" />
-    <link rel="next" title="8. ogr2ogr" href="osm2shp.html" />
-    <link rel="prev" title="6. QGIS" href="qgis.html" /> 
+    <link rel="next" title="9. ogr2ogr" href="osm2shp.html" />
+    <link rel="prev" title="7. QGIS" href="qgis.html" /> 
   </head>
   <body role="document">
     <div class="header-wrapper" role="banner">
@@ -34,9 +34,9 @@
         <div class="headertitle"><a
           href="index.html">documentación de Cayapas OSM - 1.0</a></div>
         <div class="rel" role="navigation" aria-label="related navigation">
-          <a href="qgis.html" title="6. QGIS"
+          <a href="qgis.html" title="7. QGIS"
              accesskey="P">anterior</a> |
-          <a href="osm2shp.html" title="8. ogr2ogr"
+          <a href="osm2shp.html" title="9. ogr2ogr"
              accesskey="N">siguiente</a> |
           <a href="genindex.html" title="Índice General"
              accesskey="I">índice</a>
@@ -53,9 +53,9 @@
           <div class="body" role="main">
             
   <div class="section" id="overpass-api">
-<h1>7. Overpass API<a class="headerlink" href="#overpass-api" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1>8. Overpass API<a class="headerlink" href="#overpass-api" title="Enlazar permanentemente con este título">¶</a></h1>
 <div class="section" id="introduccion">
-<h2>7.1. Introducción<a class="headerlink" href="#introduccion" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>8.1. Introducción<a class="headerlink" href="#introduccion" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Overpass API permite hacer consultas a la base de datos de OSM según distintos criterios de búsqueda. El criterio de búsqueda puede ser, entre otros, la localización de los elementos, el tipo de los mismos, que contengan determinadas etiquetas o combinaciones de varios criterios. Actua a modo de base de datos en la red: el cliente envía una petición (query) y obtiene como resultado el conjunto de datos que se corresponde con dicha petición. Los resultados de las consultas se pueden obtener en los formatos OSM XML y en OSM JSON.</p>
 <p>El wiki de OpenStreetMap ofrece una página quepuede servir de introducción a las principales características de la API de Overpass en la siguiente dirección:</p>
 <blockquote>
@@ -81,7 +81,7 @@
 <p>Otra limitación de las consultas a través de Overpass API es que no podemos hacer consultas acerca de los <em>changesets</em>, esto es, los conjuntos de cambios que han ido afectando a determinados elementos. Sí que podemos haecr la consulta con un criterio de selección temporal que nos indique el estado de un elemento en determinado instante de tiempo.</p>
 </div>
 <div class="section" id="peticion-de-los-node-de-una-zona">
-<h2>7.2. Peticion de los <strong>node</strong> de una zona<a class="headerlink" href="#peticion-de-los-node-de-una-zona" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>8.2. Peticion de los <strong>node</strong> de una zona<a class="headerlink" href="#peticion-de-los-node-de-una-zona" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>La petición más sencilla que podemos hacer es, seguramente, la de los elementos del tipo <strong>node</strong> contenidos en un area delimitado por un <em>boundig box</em>. Un <em>bounding</em> box es una área rectangular del mapa definido por las coordenadas de su esquina inferior izquierda (sur-oeste) y las de su esquina superior derecha (norte-este). El orden en que se escriben las coordenadas es &#8216;latitud mínima, longitud mínima, latitud máxima, longitud máxima&#8217;. (<strong>Nota:</strong> <em>Hay que tener en cuenta que, cuando las longitudes o latitudes son negativas, los valores menores corresponden a valores abslutos mayores, así la longitud -3.98 es *menor</em> que la longitud -3.8, por ejemplo*).</p>
 <p>Veamos un ejemplo de una query que solicite todos los nodos contenidos en un rectángulo de coordenadas <em>&#8216;40.4447, -3.7344, 40.4484, -3.7301&#8217;</em>. La sentencia o query que tenemos que escribir en el lenguaje QL de Overpass API es la siguiente:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">node</span><span class="p">(</span><span class="mf">40.4447</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.7344</span><span class="p">,</span> <span class="mf">40.4484</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.7301</span><span class="p">));</span><span class="n">out</span><span class="p">;</span>
@@ -104,7 +104,7 @@
 <p>Más adelante veremos como combinar varias etiquetas o como realizar peticiones más complejas. De momento vamos a repasar un poco algunas de las opciones que nos ofrece el portal de <em>Overpass Turbo</em>.</p>
 </div>
 <div class="section" id="opciones-de-overpass-turbo">
-<h2>7.3. Opciones de Overpass Turbo<a class="headerlink" href="#opciones-de-overpass-turbo" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>8.3. Opciones de Overpass Turbo<a class="headerlink" href="#opciones-de-overpass-turbo" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>El portal de <em>Overpass Turbo</em> nos ofrece unas cuantas opciones muy interesantes. Se accede a ellas en las pestañas que aparecen en la parte superior de la página. Las opciones principales son las siguientes:</p>
 <ul class="simple">
 <li><strong>Run</strong>: ejecuta la consulta que esté escrita en el editor y muestra el resultado en la pantalla del mapa. Una vez ejecutada la consulta puede ser necesario pulsar sobre la pequeña lupa que aparece en la parte superior izquierda delmapa para que centre la vista sobre la consulta que se acaba de realizar.</li>
@@ -118,6 +118,10 @@
 <li><strong>Map-Data</strong>: como se explicó en el aprtado anterior, estas pestañas permiten seleccionar que la salida de resultados de una consulta se muestre sobre el mapa o como texto en formato <em>OSM XML</em></li>
 </ul>
 <p>El mapa también dispone de algunas opciones de navegación en los botones de la parte superior izquierda.</p>
+<p>Extender la selección para incluir los nodes referenciados en la lista de ways
+node(50.745,7.17,50.75,7.18);( ._; &gt;; );out;</p>
+<p>Extender la selección con los way que referencian esos nodos
+node(50.745,7.17,50.75,7.18);way(bn);out;</p>
 <p>También podemos utilizar el comando linux <em>wget</em> con la siguiente estrutura:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>wget -O file.osm &quot;http://overpass-api.de/api/interpreter?data=sentencia_overpass_api&quot;
 </pre></div>
@@ -160,16 +164,17 @@
 <li class="toctree-l1"><a class="reference internal" href="primitivas.html">2. Estructura de la información en OSM</a></li>
 <li class="toctree-l1"><a class="reference internal" href="descargaosm.html">3. Descarga de datos desde OpenStreetMap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="editorid.html">4. El Editor iD</a></li>
-<li class="toctree-l1"><a class="reference internal" href="josm.html">5. JOSM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="qgis.html">6. QGIS</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">7. Overpass API</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="wikispain.html">5. El WIKI de OSM en español</a></li>
+<li class="toctree-l1"><a class="reference internal" href="josm.html">6. JOSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qgis.html">7. QGIS</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">8. Overpass API</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="osm2shp.html">8. ogr2ogr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="osm4j.html">9. Osm4j</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python.html">10. Python OsmApi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="javascript.html">11. Javascript</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mobileapps.html">12. Aplicaciones para dispositivos móviles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="osm2shp.html">9. ogr2ogr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="osm4j.html">10. Osm4j</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">11. Python OsmApi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="javascript.html">12. Javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mobileapps.html">13. Aplicaciones para dispositivos móviles</a></li>
 </ul>
 
           <div role="search">
@@ -193,9 +198,9 @@
       <div class="footer">
         <div class="left">
           <div role="navigation" aria-label="related navigaton">
-            <a href="qgis.html" title="6. QGIS"
+            <a href="qgis.html" title="7. QGIS"
               >anterior</a> |
-            <a href="osm2shp.html" title="8. ogr2ogr"
+            <a href="osm2shp.html" title="9. ogr2ogr"
               >siguiente</a> |
             <a href="genindex.html" title="Índice General"
               >índice</a>

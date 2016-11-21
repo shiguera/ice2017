@@ -62,9 +62,9 @@
 </ul>
 <p>En la base de datos de OSM a cada fenómeno de la realidad que se quiera modelizar se le asigna una <strong>primitiva geométrica</strong> que le dota de la información espacial. Hay tres tipos de primitivas geométricas:</p>
 <ul class="simple">
-<li><strong>Nodes</strong>: corresponden a fenómenos cuya geometría se modeliza con un punto</li>
-<li><strong>Ways</strong>: corresponden a fenómenos cuya geometría se modeliza mediante una línea o un polígono.</li>
-<li><strong>Relations</strong>: combinan Nodes, Ways y otras Relations para definir geometrías o elementos complejos</li>
+<li><strong>Node</strong>: corresponden a fenómenos cuya geometría se modeliza con un punto</li>
+<li><strong>Way</strong>: corresponden a fenómenos cuya geometría se modeliza mediante una línea abierta o cerrada.</li>
+<li><strong>Relation</strong>: combinan Nodes, Ways y otras Relations para definir geometrías o elementos complejos</li>
 </ul>
 <p>La información temática se incorpora al modelo mediante etiquetas, <strong>tags</strong>, que son parejas de cadenas de texto en la forma <em>key-value</em>. Cada primitiva geométrica lleva asociadas un número indeterminado de etiquetas que permiten definir su información temática. Se pueden consultar las etiquetas más frecuentes en la página:</p>
 <p><a class="reference external" href="http://wiki.openstreetmap.org/wiki/Map_Features">http://wiki.openstreetmap.org/wiki/Map_Features</a></p>
@@ -85,7 +85,6 @@
 <ul class="simple">
 <li><strong>lat</strong>: Latitud geográfica del punto en el sistema de referencia <em>WGS84</em>. Se utilizan siete decimales significativos, que equivalen aproximadamente a un centímetro de precisión.</li>
 <li><strong>lon</strong>: longitud geográfica del punto en el sistema de referencia <em>WGS84</em>. Al igual que con la latitud, se utilizan siete decimales, que confieren una precisión de aproximadamente un centímetro en el ecuador.</li>
-<li><strong>version</strong>: Es la versión del nodo</li>
 </ul>
 <p>Un ejemplo de un Node en formato <em>OSM</em>:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>&lt;node id=&quot;25496583&quot; lat=&quot;51.5173639&quot; lon=&quot;-0.140043&quot; version=&quot;1&quot; changeset=&quot;203496&quot;
@@ -114,7 +113,7 @@
 &lt;/way&gt;
 </pre></div>
 </div>
-<p>Si el último punto de un Way coincide con el primero, entonces se trata de una línea cerrada. Según el valor de las etiquetas puede tratarse de un area o simplemente deuna línea cerrada.</p>
+<p>Si el último punto de un Way coincide con el primero, entonces se trata de una línea cerrada. Según el valor de las etiquetas puede tratarse de un area o simplemente de una línea cerrada.</p>
 </div>
 <div class="section" id="relation">
 <h2>2.3. Relation<a class="headerlink" href="#relation" title="Enlazar permanentemente con este título">¶</a></h2>

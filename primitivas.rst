@@ -11,9 +11,9 @@ OSM es una base de datos de información geográfica. Los elementos o fenómenos
 
 En la base de datos de OSM a cada fenómeno de la realidad que se quiera modelizar se le asigna una **primitiva geométrica** que le dota de la información espacial. Hay tres tipos de primitivas geométricas:
 
-* **Nodes**: corresponden a fenómenos cuya geometría se modeliza con un punto
-* **Ways**: corresponden a fenómenos cuya geometría se modeliza mediante una línea o un polígono.
-* **Relations**: combinan Nodes, Ways y otras Relations para definir geometrías o elementos complejos
+* **Node**: corresponden a fenómenos cuya geometría se modeliza con un punto
+* **Way**: corresponden a fenómenos cuya geometría se modeliza mediante una línea abierta o cerrada.
+* **Relation**: combinan Nodes, Ways y otras Relations para definir geometrías o elementos complejos
 
 La información temática se incorpora al modelo mediante etiquetas, **tags**, que son parejas de cadenas de texto en la forma *key-value*. Cada primitiva geométrica lleva asociadas un número indeterminado de etiquetas que permiten definir su información temática. Se pueden consultar las etiquetas más frecuentes en la página:
 
@@ -45,8 +45,6 @@ Un Node representa una geometría puntual. Cada *node* consta de una serie de at
 
 * **lat**: Latitud geográfica del punto en el sistema de referencia *WGS84*. Se utilizan siete decimales significativos, que equivalen aproximadamente a un centímetro de precisión.
 * **lon**: longitud geográfica del punto en el sistema de referencia *WGS84*. Al igual que con la latitud, se utilizan siete decimales, que confieren una precisión de aproximadamente un centímetro en el ecuador. 
-* **version**: Es la versión del nodo 
-
 
 Un ejemplo de un Node en formato *OSM*::
 
@@ -75,7 +73,7 @@ Representa una geometría de *Linestring*. Consta de una lista de Nodes identifi
     <tag k="oneway" v="yes"/>
   </way>
 
-Si el último punto de un Way coincide con el primero, entonces se trata de una línea cerrada. Según el valor de las etiquetas puede tratarse de un area o simplemente deuna línea cerrada.
+Si el último punto de un Way coincide con el primero, entonces se trata de una línea cerrada. Según el valor de las etiquetas puede tratarse de un area o simplemente de una línea cerrada.
 
 Relation
 --------

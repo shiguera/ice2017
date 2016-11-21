@@ -148,7 +148,8 @@ Edición básica con iD
 ---------------------
 Ahora empecemos a practicar con iD.
 
-### Añadiendo puntos
+**Añadiendo puntos**
+^^^^^^^^^^^^^^^^^^^^
 - Para añadir un punto nuevo, haga clic en el botón **Punto**.
 
 .. image:: _static/id-editor_image3.png
@@ -172,7 +173,8 @@ Ahora empecemos a practicar con iD.
 
 Un "punto" creado en el editor iD es en realidad un "nodo" independiente, asociado a un conjunto de "etiquetas".
 
-### Dibujando líneas
+**Dibujando líneas**
+^^^^^^^^^^^^^^^^^^^^
 - Para agregar una nueva línea, haga clic en el botón **Línea**.
 
 .. image:: _static/id-editor_image4.png
@@ -238,7 +240,8 @@ Una "línea" creada en el editor iD es en realidad una "vía" con "etiquetas" as
 
 >Una consideración con respecto a la **Eliminación**: En general, debería evitar eliminar mapeos de otras personas si solo necesitan mejoras. Puede borrar sus propios errores, pero debería intentar *corregir* los objetos mapeados de otras personas si es que necesitan cambios. Esto preserva la historia de los elementos en la base de datos de OSM y es respetuoso hacia otros mapeadores. Si realmente cree que algo debería ser eliminado, considere primero consultarlo con el mapeador original, o en alguna de las listas de correo de OSM.
 
-### Dibujando formas (polígonos)
+**Dibujando formas (polígonos)**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 - Para añadir un nuevo polígono, haga clic en el botón **Área**.
 
 .. image:: _static/id-editor_image34.png

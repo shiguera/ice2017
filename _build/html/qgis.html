@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>6. QGIS &mdash; documentación de Cayapas OSM - 1.0</title>
+    <title>7. QGIS &mdash; documentación de Cayapas OSM - 1.0</title>
     
     <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -25,8 +25,8 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
     <link rel="top" title="documentación de Cayapas OSM - 1.0" href="index.html" />
-    <link rel="next" title="7. Overpass API" href="overpassapi.html" />
-    <link rel="prev" title="5. JOSM" href="josm.html" /> 
+    <link rel="next" title="8. Overpass API" href="overpassapi.html" />
+    <link rel="prev" title="6. JOSM" href="josm.html" /> 
   </head>
   <body role="document">
     <div class="header-wrapper" role="banner">
@@ -34,9 +34,9 @@
         <div class="headertitle"><a
           href="index.html">documentación de Cayapas OSM - 1.0</a></div>
         <div class="rel" role="navigation" aria-label="related navigation">
-          <a href="josm.html" title="5. JOSM"
+          <a href="josm.html" title="6. JOSM"
              accesskey="P">anterior</a> |
-          <a href="overpassapi.html" title="7. Overpass API"
+          <a href="overpassapi.html" title="8. Overpass API"
              accesskey="N">siguiente</a> |
           <a href="genindex.html" title="Índice General"
              accesskey="I">índice</a>
@@ -53,7 +53,7 @@
           <div class="body" role="main">
             
   <div class="section" id="qgis">
-<h1>6. QGIS<a class="headerlink" href="#qgis" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1>7. QGIS<a class="headerlink" href="#qgis" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>Las últimas versiones de <em>QGIS</em> traen instalado por defecto el plugin que permite descargar datos desde <em>OSM</em>. Podemos acceder a él en la opción de menú <em>Vectorial -&gt; OpenStreetMap -&gt; Descargar datos</em>. Habrá que indicar las coordenadas de las esquinas del <em>bounding box</em> que queremos descargar o bien indicarle que descargue los datos correspondientes al area de pantalla visible en ese momento.</p>
 <p>Una forma de seleccionar que bounding box queremos descargar puede ser elegir sobre las ortofotografías de la zona. Para ello, indicaremos a <em>QGIS</em> que queremos añadir una capa tipo <em>WMS</em> y buscaremos, en la ventana de selección que nos ofrece el programa, el servicio de mapas que queremos utilizar. En este ejemplo estamos utilizando la capa de ortofotografias <em>PNOA</em> de máxima actualidad procedentes del IGN. El resultado, tras cargar la capa y seleccionar el area buscado se puede ver en la imagen siguiente:</p>
 <a class="reference internal image-reference" href="_images/qgiswms.png"><img alt="qgis wms" class="align-center" src="_images/qgiswms.png" style="width: 600px;" /></a>
@@ -66,13 +66,13 @@
 <p>A partir de ahí, podremos disponer de cada una de las capas para operar con ellas, visualizarlas, editarlas, editar su tabla de atributos, hacer búsquedas de elementos concretos a partir del valor de alguna de las etiquetas y cualquier otra acción que se pueda realizar sobre una capa vectorial.</p>
 <a class="reference internal image-reference" href="_images/qgisdataosm.png"><img alt="qgis data osm" class="align-center" src="_images/qgisdataosm.png" style="width: 700px;" /></a>
 <div class="section" id="seleccionar-objetos-espaciales-por-filtro">
-<h2>6.1. Seleccionar objetos espaciales por filtro<a class="headerlink" href="#seleccionar-objetos-espaciales-por-filtro" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>7.1. Seleccionar objetos espaciales por filtro<a class="headerlink" href="#seleccionar-objetos-espaciales-por-filtro" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Una posibilidad es seleccionar una serie de elementos de una de las capas a partir del valor de alguna de las etiquetas. Una vez seleccionadas, podremos grabarlas de manera independiente en formato shapefile, por ejemplo. Esto se hace aplicando un filtro en la tabla de atributos de la capa y luego seleccionando la opción de menu &#8216;<em>Capa -&gt; save as</em>&#8216;, sin olvidarnos de activar el checking &#8216;<em>guardar solo los objetos espaciales seleccionados</em>&#8216;</p>
 <p>Desde la misma opción de menú &#8216;<em>Guardar como</em>&#8216; podemos seleccionar otros formatos, como <em>sqlite</em>, <em>geojson</em>, <em>Autocad DXF</em>, <em>CSV</em>, <em>Microstation</em>, <em>DBF</em>, <em>GPX</em> y otros.</p>
 <p>Por ejemplo, si lo guardamos en formato <em>DBF</em> o <em>CSV</em> podremos abrir luego los datos con la hoja de cálculo.</p>
 </div>
 <div class="section" id="exportar-a-postgis">
-<h2>6.2. Exportar a Postgis<a class="headerlink" href="#exportar-a-postgis" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>7.2. Exportar a Postgis<a class="headerlink" href="#exportar-a-postgis" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Podemos exportar los datos a <em>Postgis</em>. Para ello tendremos que abrir conexión con una base de datos <em>Postgis</em> existente mediante el explorador situado a la izquierda de la pantalla.</p>
 </div>
 </div>
@@ -89,16 +89,17 @@
 <li class="toctree-l1"><a class="reference internal" href="primitivas.html">2. Estructura de la información en OSM</a></li>
 <li class="toctree-l1"><a class="reference internal" href="descargaosm.html">3. Descarga de datos desde OpenStreetMap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="editorid.html">4. El Editor iD</a></li>
-<li class="toctree-l1"><a class="reference internal" href="josm.html">5. JOSM</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">6. QGIS</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="wikispain.html">5. El WIKI de OSM en español</a></li>
+<li class="toctree-l1"><a class="reference internal" href="josm.html">6. JOSM</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">7. QGIS</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="overpassapi.html">7. Overpass API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="osm2shp.html">8. ogr2ogr</a></li>
-<li class="toctree-l1"><a class="reference internal" href="osm4j.html">9. Osm4j</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python.html">10. Python OsmApi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="javascript.html">11. Javascript</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mobileapps.html">12. Aplicaciones para dispositivos móviles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overpassapi.html">8. Overpass API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="osm2shp.html">9. ogr2ogr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="osm4j.html">10. Osm4j</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">11. Python OsmApi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="javascript.html">12. Javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mobileapps.html">13. Aplicaciones para dispositivos móviles</a></li>
 </ul>
 
           <div role="search">
@@ -122,9 +123,9 @@
       <div class="footer">
         <div class="left">
           <div role="navigation" aria-label="related navigaton">
-            <a href="josm.html" title="5. JOSM"
+            <a href="josm.html" title="6. JOSM"
               >anterior</a> |
-            <a href="overpassapi.html" title="7. Overpass API"
+            <a href="overpassapi.html" title="8. Overpass API"
               >siguiente</a> |
             <a href="genindex.html" title="Índice General"
               >índice</a>

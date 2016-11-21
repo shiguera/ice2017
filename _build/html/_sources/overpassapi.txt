@@ -119,8 +119,11 @@ El mapa también dispone de algunas opciones de navegación en los botones de la
 
 
 
+Extender la selección para incluir los nodes referenciados en la lista de ways
+node(50.745,7.17,50.75,7.18);( ._; >; );out;
 
-
+Extender la selección con los way que referencian esos nodos
+node(50.745,7.17,50.75,7.18);way(bn);out; 
 
 
 También podemos utilizar el comando linux *wget* con la siguiente estrutura::

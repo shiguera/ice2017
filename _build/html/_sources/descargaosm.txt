@@ -5,7 +5,7 @@ Descarga de datos desde OpenStreetMap
 
 Los Datos del mapa de OpenStreetMap, se pueden descargar de varias formas. El mapa entero son una enorme cantidad de datos (unos 50 Gb en formato comprimido). Se recomienda empezar con una región pequeña y determinada para asegurarse  que el proceso funciona correctamente.
 
-OpenStreetMap es un proyecto federativo. Esto significa que gran cantidad de sus recursos esenciales, son suministrados por terceras partes. Sea valiente, trate de descargar de estos lugares en primer lugar. Los servidores oficiales, no son grandes centros de datos y por lo tanto no disponen de grandes recursos. Se dedican principalmente a mantener el flujo de datos. 
+OpenStreetMap es un proyecto federativo. Esto significa que gran cantidad de sus recursos esenciales, son suministrados por terceras partes. Conviene tratar de descargar de estos sitios en primer lugar. Los servidores oficiales, no son grandes centros de datos y por lo tanto no disponen de grandes recursos. Se dedican principalmente a mantener el flujo de datos. 
 
 
 OSM File formats
@@ -64,7 +64,7 @@ Las últimas versiones del programa GIS de escritorio *QGIS* ya incorporan un pl
 Overpass API
 ^^^^^^^^^^^^
 
-Overpass API permite descargar áreas determinadas, elementos con tags específicos, redes de transporte público, redes fluviales o cualquier otro tipo de entidad. Esta descarga selectiva de determinados elementos dentro del area de interés, hace que estas herramientas sean muy interesantes.
+Overpass API permite descargar áreas determinadas, elementos con tags específicos, redes de transporte público, redes fluviales o cualquier otro tipo de entidad. Esta descarga selectiva de determinados elementos dentro del area de interés, hace que esta herramienta sea muy interesante.
 
 Desde lenguajes de programación
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
