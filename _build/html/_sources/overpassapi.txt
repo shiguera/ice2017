@@ -140,7 +140,7 @@ Todos nodos los hospitales de Madrid::
 
 Todos los nodos con dos etiquetas determinadas
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Podemos poner como condición que el valor de dos o más etiquetas estédeterminado, por ejemplo, para encontrar el Restaurante '*El Albero*' de Moralzarzal::
+Podemos poner como condición que el valor de dos o más etiquetas esté determinado, por ejemplo, para encontrar el Restaurante '*El Albero*' de Moralzarzal::
 
     node(40.6631, -4.0142, 40.6927, -3.9468)["amenity"="restaurant"]["name"="El Albero"];out;
 
@@ -162,38 +162,47 @@ La carretera M-607::
   way(40.6573,-3.9610,40.7169,-3.7423)["ref"="M-607"];(._;>;);out;
 
 Todos los ways con la etiqueta *building=house* de una determinada zona::
+
   way(40.67441, -3.97063, 40.67812, -3.96221)["building"="house"];(._;>;);out;
 
 Unión 
 ^^^^^
 Podemos hacer la unión de dos queries poniéndolas entre paréntesis y separadas por ';'. Por ejemplo, la siguiente sentencia solicita los Nodes con 'amenity=restaurant' o 'amenity=pub'::
 
-  (node(41.9837,2.8243,41.9866,2.8307)[amenity=restaurant];node(41.9837,2.8243,41.9866,2.8307)[amenity=pub]);out;
+  (node(41.9837,2.8243,41.9866,2.8307)[amenity=restaurant];
+  node(41.9837,2.8243,41.9866,2.8307)[amenity=pub]);out;
 
 Otro ejemplo: todos los bares o pubs del Barrio de Salamanca en Madrid::
 
-  (node(40.4232,-3.6918,40.4378,-3.6793)["amenity"="bar"];node(40.4232,-3.6918,40.4378,-3.6793)["amenity"="pub"];);out;
+  (node(40.4232,-3.6918,40.4378,-3.6793)["amenity"="bar"];
+  node(40.4232,-3.6918,40.4378,-3.6793)["amenity"="pub"];);out;
 
 Otro ejemplo podría ser todos los edificios y piscinas de una determinada zona::
 
-  (way(40.67441, -3.97063, 40.67812, -3.96221)["building"="house"];way(40.67441, -3.97063, 40.67812, -3.96221)["leisure"="swimming_pool"]);(._;>;);out;
+  (way(40.67441, -3.97063, 40.67812, -3.96221)["building"="house"];
+  way(40.67441, -3.97063, 40.67812, -3.96221)["leisure"="swimming_pool"]);
+  (._;>;);out;
 
 
-Around: Elementos a cierta distancia de uno punto de coordenadas conocidas
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Around: Elementos a cierta distancia de un punto
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-También podríamos pedir los Nodes que se encuentran a una determinada distancia de un punto de coordenadas conocidas::
+Podemos pedir los Nodes que se encuentran a una determinada distancia de un punto de coordenadas conocidas::
 
   node(around:100.0,41.9837,2.8243);out;
 
-Around un elemento determinado::
+Un ejemplo podría ser obtener las farmacias a menos de un kilómetro de la Plaza del Carmen, en Madrid::
+
+  node(around:1000.0,40.41876,-3.70331)["amenity"="pharmacy"];out;
+
+Around de un elemento determinado del que conocemos su *Id*. En el siguiente ejemplo se obtienen los bares a menos de 500 metros de la iglesia de Moralzarzal::
 
   way(132527765);node(around:500)["amenity"="bar"];out;
 
 
 Hay multitud de combinaciones que permiten hacer todo tipo de consultas selectivas. Se puede consultar la documentación completa del lenguaje en el siguiente enlace:
 
-`http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_element_id <http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_element_id>`_
+`http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL <http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL>`_
 
 Encontrar el ID de un elemento
 ------------------------------

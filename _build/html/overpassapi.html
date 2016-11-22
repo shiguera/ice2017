@@ -145,7 +145,7 @@
 </div>
 <div class="section" id="todos-los-nodos-con-dos-etiquetas-determinadas">
 <h3>8.4.3. Todos los nodos con dos etiquetas determinadas<a class="headerlink" href="#todos-los-nodos-con-dos-etiquetas-determinadas" title="Enlazar permanentemente con este título">¶</a></h3>
-<p>Podemos poner como condición que el valor de dos o más etiquetas estédeterminado, por ejemplo, para encontrar el Restaurante &#8216;<em>El Albero</em>&#8216; de Moralzarzal:</p>
+<p>Podemos poner como condición que el valor de dos o más etiquetas esté determinado, por ejemplo, para encontrar el Restaurante &#8216;<em>El Albero</em>&#8216; de Moralzarzal:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>node(40.6631, -4.0142, 40.6927, -3.9468)[&quot;amenity&quot;=&quot;restaurant&quot;][&quot;name&quot;=&quot;El Albero&quot;];out;
 </pre></div>
 </div>
@@ -167,38 +167,46 @@
 <div class="highlight-python"><div class="highlight"><pre><span></span>way(40.6573,-3.9610,40.7169,-3.7423)[&quot;ref&quot;=&quot;M-607&quot;];(._;&gt;;);out;
 </pre></div>
 </div>
-<dl class="docutils">
-<dt>Todos los ways con la etiqueta <em>building=house</em> de una determinada zona::</dt>
-<dd>way(40.67441, -3.97063, 40.67812, -3.96221)[&#8220;building&#8221;=&#8221;house&#8221;];(._;&gt;;);out;</dd>
-</dl>
+<p>Todos los ways con la etiqueta <em>building=house</em> de una determinada zona:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>way(40.67441, -3.97063, 40.67812, -3.96221)[&quot;building&quot;=&quot;house&quot;];(._;&gt;;);out;
+</pre></div>
+</div>
 </div>
 <div class="section" id="union">
 <h3>8.4.6. Unión<a class="headerlink" href="#union" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Podemos hacer la unión de dos queries poniéndolas entre paréntesis y separadas por &#8216;;&#8217;. Por ejemplo, la siguiente sentencia solicita los Nodes con &#8216;amenity=restaurant&#8217; o &#8216;amenity=pub&#8217;:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>(node(41.9837,2.8243,41.9866,2.8307)[amenity=restaurant];node(41.9837,2.8243,41.9866,2.8307)[amenity=pub]);out;
+<div class="highlight-python"><div class="highlight"><pre><span></span>(node(41.9837,2.8243,41.9866,2.8307)[amenity=restaurant];
+node(41.9837,2.8243,41.9866,2.8307)[amenity=pub]);out;
 </pre></div>
 </div>
 <p>Otro ejemplo: todos los bares o pubs del Barrio de Salamanca en Madrid:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>(node(40.4232,-3.6918,40.4378,-3.6793)[&quot;amenity&quot;=&quot;bar&quot;];node(40.4232,-3.6918,40.4378,-3.6793)[&quot;amenity&quot;=&quot;pub&quot;];);out;
+<div class="highlight-python"><div class="highlight"><pre><span></span>(node(40.4232,-3.6918,40.4378,-3.6793)[&quot;amenity&quot;=&quot;bar&quot;];
+node(40.4232,-3.6918,40.4378,-3.6793)[&quot;amenity&quot;=&quot;pub&quot;];);out;
 </pre></div>
 </div>
 <p>Otro ejemplo podría ser todos los edificios y piscinas de una determinada zona:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>(way(40.67441, -3.97063, 40.67812, -3.96221)[&quot;building&quot;=&quot;house&quot;];way(40.67441, -3.97063, 40.67812, -3.96221)[&quot;leisure&quot;=&quot;swimming_pool&quot;]);(._;&gt;;);out;
+<div class="highlight-python"><div class="highlight"><pre><span></span>(way(40.67441, -3.97063, 40.67812, -3.96221)[&quot;building&quot;=&quot;house&quot;];
+way(40.67441, -3.97063, 40.67812, -3.96221)[&quot;leisure&quot;=&quot;swimming_pool&quot;]);
+(._;&gt;;);out;
 </pre></div>
 </div>
 </div>
-<div class="section" id="around-elementos-a-cierta-distancia-de-uno-punto-de-coordenadas-conocidas">
-<h3>8.4.7. Around: Elementos a cierta distancia de uno punto de coordenadas conocidas<a class="headerlink" href="#around-elementos-a-cierta-distancia-de-uno-punto-de-coordenadas-conocidas" title="Enlazar permanentemente con este título">¶</a></h3>
-<p>También podríamos pedir los Nodes que se encuentran a una determinada distancia de un punto de coordenadas conocidas:</p>
+<div class="section" id="around-elementos-a-cierta-distancia-de-un-punto">
+<h3>8.4.7. Around: Elementos a cierta distancia de un punto<a class="headerlink" href="#around-elementos-a-cierta-distancia-de-un-punto" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Podemos pedir los Nodes que se encuentran a una determinada distancia de un punto de coordenadas conocidas:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>node(around:100.0,41.9837,2.8243);out;
 </pre></div>
 </div>
-<p>Around un elemento determinado:</p>
+<p>Un ejemplo podría ser obtener las farmacias a menos de un kilómetro de la Plaza del Carmen, en Madrid:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>node(around:1000.0,40.41876,-3.70331)[&quot;amenity&quot;=&quot;pharmacy&quot;];out;
+</pre></div>
+</div>
+<p>Around de un elemento determinado del que conocemos su <em>Id</em>. En el siguiente ejemplo se obtienen los bares a menos de 500 metros de la iglesia de Moralzarzal:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>way(132527765);node(around:500)[&quot;amenity&quot;=&quot;bar&quot;];out;
 </pre></div>
 </div>
 <p>Hay multitud de combinaciones que permiten hacer todo tipo de consultas selectivas. Se puede consultar la documentación completa del lenguaje en el siguiente enlace:</p>
-<p><a class="reference external" href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_element_id">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_element_id</a></p>
+<p><a class="reference external" href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL</a></p>
 </div>
 </div>
 <div class="section" id="encontrar-el-id-de-un-elemento">
