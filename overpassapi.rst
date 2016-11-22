@@ -118,32 +118,53 @@ Ejemplos con Overpass Turbo
 
 Un elemento por su ID
 ^^^^^^^^^^^^^^^^^^^^^
+Si conocemos el *Id* del elemento que queremos descargar podemos solicitar la información del mismo::
 
   node(4129698657);out;
 
 
-Todos los nodos farmacia de Salamanca
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Todos los nodos con una etiqueta determinada
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Todas las farmacias del Barrio de Salamanca en Madrid::
 
   node(40.9365, -5.7087, 40.9942, -5.6586)["amenity"="pharmacy"];out;
 
 Todas los nodos paradas de autobús de la Ciudad Universitaria en Madrid::
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   node(40.4405,-3.7404,40.4551,-3.7279)["highway"="bus_stop"];out;
 
 Todos nodos los hospitales de Madrid::
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   node(40.3091,-3.7707,40.5420,-3.5702)["amenity"="hospital"];out;
 
+Todos los nodos con dos etiquetas determinadas
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Podemos poner como condición que el valor de dos o más etiquetas estédeterminado, por ejemplo, para encontrar el Restaurante '*El Albero*' de Moralzarzal::
+
+    node(40.6631, -4.0142, 40.6927, -3.9468)["amenity"="restaurant"]["name"="El Albero"];out;
+
+También podríamos encontrarlo sin especificar el *bounding box*, solo por etiquetas::
+
+  node["addr:city"="Moralzarzal"]["amenity"="restaurant"]["name"="El Albero"];out;
+
+
+Ways de una Relation
+^^^^^^^^^^^^^^^^^^^^
 Todas las ways de Madrid referenciadas en la relación de ref=M-40::
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   relation(40.3091,-3.7707,40.5420,-3.5702)["ref"="M-40"];way(r);out;
 
+Ways con recursividad a nodos para que se vean las líneas
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+La carretera M-607::
 
-Ûnión 
+  way(40.6573,-3.9610,40.7169,-3.7423)["ref"="M-607"];(._;>;);out;
+
+Todos los ways con la etiqueta *building=house* de una determinada zona::
+  way(40.67441, -3.97063, 40.67812, -3.96221)["building"="house"];(._;>;);out;
+
+Unión 
 ^^^^^
 Podemos hacer la unión de dos queries poniéndolas entre paréntesis y separadas por ';'. Por ejemplo, la siguiente sentencia solicita los Nodes con 'amenity=restaurant' o 'amenity=pub'::
 
@@ -153,19 +174,19 @@ Otro ejemplo: todos los bares o pubs del Barrio de Salamanca en Madrid::
 
   (node(40.4232,-3.6918,40.4378,-3.6793)["amenity"="bar"];node(40.4232,-3.6918,40.4378,-3.6793)["amenity"="pub"];);out;
 
-Ways con recursividad a nodos para que se vean las líneas: M-607
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Otro ejemplo podría ser todos los edificios y piscinas de una determinada zona::
 
-  way(40.6573,-3.9610,40.7169,-3.7423)["ref"="M-607"];(._;>;);out;
+  (way(40.67441, -3.97063, 40.67812, -3.96221)["building"="house"];way(40.67441, -3.97063, 40.67812, -3.96221)["leisure"="swimming_pool"]);(._;>;);out;
+
 
 Around: Elementos a cierta distancia de uno punto de coordenadas conocidas
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-También podríamos pedir los Nodes que se encuentran a una determinada distancia de un punto de coordenadas conocidas:
+También podríamos pedir los Nodes que se encuentran a una determinada distancia de un punto de coordenadas conocidas::
 
   node(around:100.0,41.9837,2.8243);out;
 
-Around un elemento determinado:
+Around un elemento determinado::
 
   way(132527765);node(around:500)["amenity"="bar"];out;
 
@@ -174,8 +195,33 @@ Hay multitud de combinaciones que permiten hacer todo tipo de consultas selectiv
 
 `http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_element_id <http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_element_id>`_
 
+Encontrar el ID de un elemento
+------------------------------
+Si queremos conocer el Id que corresponde a un elemento del mapa, podemos activar la edición con Id y, a continuación, pinchar en el enlace que aparece abajo del panel **Ver en openstreetmap.org**. Nos abrirá una ventana nueva con el mapa y el elemento seleccionado. También nos mostrará información del elemento.
 
+Acceder a la información de un elemento conocido su tipo y su Id
+----------------------------------------------------------------
+Podemos acceder directamente a la información de un elemento accediendo a la web dirección::
 
+  http://www.openstreetmap.org/tipo/id
+
+Un ejemplo sería el siguiente, en el que se accede a la información de la Iglesia de Moralzarzal:
+
+`https://www.openstreetmap.org/way/132527765 <https://www.openstreetmap.org/way/132527765>`_
+
+En la parte inferior del panel de información aparece un enlace desde el que podemos descargar el elemento en formato *.osm*.
+
+Conocer el historial de cambios de un elemento
+----------------------------------------------
+Utilizando el procedimiento del apartado anterior, en la parte inferior del panel de información del elemento aparece un enlace que nos mostrará el historial de cambios.
+
+También podemos acceder directamente, si conocemos el tipo de elemento y su id mediante la siguiente *url*::
+
+    http://www.openstreetmap.org/tipo/id/history
+
+Por ejemplo, para acceder al historial de la Plaza de Toros de Moralzarzal, que tiene el id=93278820:
+
+`https://www.openstreetmap.org/way/93278820/history <https://www.openstreetmap.org/way/93278820/history>`_
 
 Utilización con wget desde Linux
 --------------------------------
