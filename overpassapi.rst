@@ -127,17 +127,17 @@ Todos los nodos farmacia de Salamanca
 
   node(40.9365, -5.7087, 40.9942, -5.6586)["amenity"="pharmacy"];out;
 
-Todas los nodos paradas de autobús de la Ciudad Universitaria en Madrid
+Todas los nodos paradas de autobús de la Ciudad Universitaria en Madrid::
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   node(40.4405,-3.7404,40.4551,-3.7279)["highway"="bus_stop"];out;
 
-Todos nodos los hospitales de Madrid
+Todos nodos los hospitales de Madrid::
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   node(40.3091,-3.7707,40.5420,-3.5702)["amenity"="hospital"];out;
 
-Todas las ways de Madrid referenciadas en la relación de ref=M-40
+Todas las ways de Madrid referenciadas en la relación de ref=M-40::
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   relation(40.3091,-3.7707,40.5420,-3.5702)["ref"="M-40"];way(r);out;
@@ -149,7 +149,7 @@ Podemos hacer la unión de dos queries poniéndolas entre paréntesis y separada
 
   (node(41.9837,2.8243,41.9866,2.8307)[amenity=restaurant];node(41.9837,2.8243,41.9866,2.8307)[amenity=pub]);out;
 
-Otro ejemplo: todos los bares o pubs del Barrio de Salamanca en Madrid
+Otro ejemplo: todos los bares o pubs del Barrio de Salamanca en Madrid::
 
   (node(40.4232,-3.6918,40.4378,-3.6793)["amenity"="bar"];node(40.4232,-3.6918,40.4378,-3.6793)["amenity"="pub"];);out;
 
