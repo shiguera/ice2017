@@ -13,7 +13,7 @@ El wiki de OpenStreetMap ofrece una página quepuede servir de introducción a l
 
  `http://wiki.openstreetmap.org/wiki/Overpass_API <http://wiki.openstreetmap.org/wiki/Overpass_API>`_
 
-El portal de Overpass-API, por su parte, ofrece la información completa acerca del API, su lenguaje de consultas y otras herramientas que se ponen a disposición. La dirección del portalde Overpass API es: 
+El portal de Overpass-API, por su parte, ofrece la información completa acerca del API, su lenguaje de consultas y otras herramientas que se ponen a disposición. La dirección del portal de Overpass API es: 
 
   `http://overpass-api.de/index.html <http://overpass-api.de/index.html>`_
 
@@ -63,7 +63,7 @@ Puedes probar la orden tecleándola en el portal `Overpass Turbo <http://overpas
 
 Esta sentencia en realidad son dos órdenes a la API de Overpass: 
 
-+ La primera orden es *(node(minlat, minlon, maxlat, maxlon))*
++ La primera orden es *(node(minlat, minlon, maxlat, maxlon))*. El bounding box se especifica como: (minLat, minLon, maxLat, maxLon).
 
 + La segunda orden es *out*
 
@@ -113,50 +113,81 @@ El portal de *Overpass Turbo* nos ofrece unas cuantas opciones muy interesantes.
 
 El mapa también dispone de algunas opciones de navegación en los botones de la parte superior izquierda.
 
+Ejemplos con Overpass Turbo
+---------------------------
 
-
-
-
-
-
-Extender la selección para incluir los nodes referenciados en la lista de ways
-node(50.745,7.17,50.75,7.18);( ._; >; );out;
-
-Extender la selección con los way que referencian esos nodos
-node(50.745,7.17,50.75,7.18);way(bn);out; 
-
-
-También podemos utilizar el comando linux *wget* con la siguiente estrutura::
-
-  wget -O file.osm "http://overpass-api.de/api/interpreter?data=sentencia_overpass_api"
-
-Mediante peticiones GET o POST, podemos realizar las consultas desde cualquier lenguaje de programación.
-
-El siguiente ejemplo es una query que genera un flujo de datos con todos los *Nodes* contenidos en un determinado *bounding box* y los envía a la salida estándar::
-
-  node(41.9837,2.8243,41.9866,2.8307);out;
-
-Veamos otro ejemplo. Vamos a filtrar los datos de la sentencia anterior de modo que nos quedemos solo con los nodos que tienen determinado valor en una etiqueta,por ejemplo, los nodos con la etiqueta *amenity=restaurant*::
-
-  node(41.9837,2.8243,41.9866,2.8307)[amenity=restaurant];out;
-
-El bounding box se especifica como: (minLat, minLon, maxLat, maxLon).
-
-Otro ejemplo en el que solicitamos un Node con un Id determinado::
+Un elemento por su ID
+^^^^^^^^^^^^^^^^^^^^^
 
   node(4129698657);out;
+
+
+Todos los nodos farmacia de Salamanca
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  node(40.9365, -5.7087, 40.9942, -5.6586)["amenity"="pharmacy"];out;
+
+Todas los nodos paradas de autobús de la Ciudad Universitaria en Madrid
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  node(40.4405,-3.7404,40.4551,-3.7279)["highway"="bus_stop"];out;
+
+Todos nodos los hospitales de Madrid
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  node(40.3091,-3.7707,40.5420,-3.5702)["amenity"="hospital"];out;
+
+Todas las ways de Madrid referenciadas en la relación de ref=M-40
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  relation(40.3091,-3.7707,40.5420,-3.5702)["ref"="M-40"];way(r);out;
+
+
+Ûnión 
+^^^^^
+Podemos hacer la unión de dos queries poniéndolas entre paréntesis y separadas por ';'. Por ejemplo, la siguiente sentencia solicita los Nodes con 'amenity=restaurant' o 'amenity=pub'::
+
+  (node(41.9837,2.8243,41.9866,2.8307)[amenity=restaurant];node(41.9837,2.8243,41.9866,2.8307)[amenity=pub]);out;
+
+Otro ejemplo: todos los bares o pubs del Barrio de Salamanca en Madrid
+
+  (node(40.4232,-3.6918,40.4378,-3.6793)["amenity"="bar"];node(40.4232,-3.6918,40.4378,-3.6793)["amenity"="pub"];);out;
+
+Ways con recursividad a nodos para que se vean las líneas: M-607
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  way(40.6573,-3.9610,40.7169,-3.7423)["ref"="M-607"];(._;>;);out;
+
+Around: Elementos a cierta distancia de uno punto de coordenadas conocidas
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 También podríamos pedir los Nodes que se encuentran a una determinada distancia de un punto de coordenadas conocidas:
 
   node(around:100.0,41.9837,2.8243);out;
 
-Podemos hacer la unión de dos queries poniéndolas entre paréntesis y separadas por ';'. Por ejemplo, la siguiente sentencia solicita los Nodes con 'amenity=restaurant' o 'amenity=pub'::
+Around un elemento determinado:
 
-  (node(41.9837,2.8243,41.9866,2.8307)[amenity=restaurant];node(41.9837,2.8243,41.9866,2.8307)[amenity=pub]);out;
+  way(132527765);node(around:500)["amenity"="bar"];out;
+
 
 Hay multitud de combinaciones que permiten hacer todo tipo de consultas selectivas. Se puede consultar la documentación completa del lenguaje en el siguiente enlace:
 
 `http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_element_id <http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_element_id>`_
+
+
+
+
+Utilización con wget desde Linux
+--------------------------------
+
+También podemos utilizar el comando linux *wget* con la siguiente estrutura::
+
+  wget -O file.osm "http://overpass-api.de/api/interpreter?data=sentencia_overpass_api"
+
+Utilización desde lenguajes de programación
+-------------------------------------------
+
+Mediante peticiones GET o POST, podemos realizar las consultas desde cualquier lenguaje de programación.
 
 
 

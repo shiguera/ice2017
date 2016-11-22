@@ -60,7 +60,7 @@
 <p>El wiki de OpenStreetMap ofrece una página quepuede servir de introducción a las principales características de la API de Overpass en la siguiente dirección:</p>
 <blockquote>
 <div><a class="reference external" href="http://wiki.openstreetmap.org/wiki/Overpass_API">http://wiki.openstreetmap.org/wiki/Overpass_API</a></div></blockquote>
-<p>El portal de Overpass-API, por su parte, ofrece la información completa acerca del API, su lenguaje de consultas y otras herramientas que se ponen a disposición. La dirección del portalde Overpass API es:</p>
+<p>El portal de Overpass-API, por su parte, ofrece la información completa acerca del API, su lenguaje de consultas y otras herramientas que se ponen a disposición. La dirección del portal de Overpass API es:</p>
 <blockquote>
 <div><a class="reference external" href="http://overpass-api.de/index.html">http://overpass-api.de/index.html</a></div></blockquote>
 <p>Overpass API tiene su propio lenguaje. En este curso haremos una introducción a dicho lenguaje y aprenderemos cómo hacer algunas consultas básicas. Se puede encontrar una descripción más detallada de las especificaciones del lenguaje en las siguientes direcciones WEB:</p>
@@ -93,7 +93,7 @@
 <a class="reference internal image-reference" href="_images/overpassapi_ejemplo1.png"><img alt="overpass api ejemplo 1" src="_images/overpassapi_ejemplo1.png" style="width: 600px;" /></a>
 <p>Esta sentencia en realidad son dos órdenes a la API de Overpass:</p>
 <ul class="simple">
-<li>La primera orden es <em>(node(minlat, minlon, maxlat, maxlon))</em></li>
+<li>La primera orden es <em>(node(minlat, minlon, maxlat, maxlon))</em>. El bounding box se especifica como: (minLat, minLon, maxLat, maxLon).</li>
 <li>La segunda orden es <em>out</em></li>
 </ul>
 <p>Las dos ordenes se separan por un punto y coma y se ejecutan una a continuación de otra. Podemos enlazar varias ordenes una detrás de otra separándolas por punto y coma. La orden completa funciona a modo &#8216;<em>tubería</em>&#8216;. El resultado de cada orden individual se pasa a la siguiente orden, que operará sobre dicho resultado. En el ejemplo anterior, el resultado de los nodos del bounding box son los que se pasan a la orden <em>out</em>, que nos devuelve el conjunto de datos.</p>
@@ -118,37 +118,71 @@
 <li><strong>Map-Data</strong>: como se explicó en el aprtado anterior, estas pestañas permiten seleccionar que la salida de resultados de una consulta se muestre sobre el mapa o como texto en formato <em>OSM XML</em></li>
 </ul>
 <p>El mapa también dispone de algunas opciones de navegación en los botones de la parte superior izquierda.</p>
-<p>Extender la selección para incluir los nodes referenciados en la lista de ways
-node(50.745,7.17,50.75,7.18);( ._; &gt;; );out;</p>
-<p>Extender la selección con los way que referencian esos nodos
-node(50.745,7.17,50.75,7.18);way(bn);out;</p>
-<p>También podemos utilizar el comando linux <em>wget</em> con la siguiente estrutura:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>wget -O file.osm &quot;http://overpass-api.de/api/interpreter?data=sentencia_overpass_api&quot;
-</pre></div>
 </div>
-<p>Mediante peticiones GET o POST, podemos realizar las consultas desde cualquier lenguaje de programación.</p>
-<p>El siguiente ejemplo es una query que genera un flujo de datos con todos los <em>Nodes</em> contenidos en un determinado <em>bounding box</em> y los envía a la salida estándar:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">node</span><span class="p">(</span><span class="mf">41.9837</span><span class="p">,</span><span class="mf">2.8243</span><span class="p">,</span><span class="mf">41.9866</span><span class="p">,</span><span class="mf">2.8307</span><span class="p">);</span><span class="n">out</span><span class="p">;</span>
-</pre></div>
-</div>
-<p>Veamos otro ejemplo. Vamos a filtrar los datos de la sentencia anterior de modo que nos quedemos solo con los nodos que tienen determinado valor en una etiqueta,por ejemplo, los nodos con la etiqueta <em>amenity=restaurant</em>:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>node(41.9837,2.8243,41.9866,2.8307)[amenity=restaurant];out;
-</pre></div>
-</div>
-<p>El bounding box se especifica como: (minLat, minLon, maxLat, maxLon).</p>
-<p>Otro ejemplo en el que solicitamos un Node con un Id determinado:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">node</span><span class="p">(</span><span class="mi">4129698657</span><span class="p">);</span><span class="n">out</span><span class="p">;</span>
-</pre></div>
-</div>
-<p>También podríamos pedir los Nodes que se encuentran a una determinada distancia de un punto de coordenadas conocidas:</p>
+<div class="section" id="ejemplos-con-overpass-turbo">
+<h2>8.4. Ejemplos con Overpass Turbo<a class="headerlink" href="#ejemplos-con-overpass-turbo" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="un-elemento-por-su-id">
+<h3>8.4.1. Un elemento por su ID<a class="headerlink" href="#un-elemento-por-su-id" title="Enlazar permanentemente con este título">¶</a></h3>
 <blockquote>
-<div>node(around:100.0,41.9837,2.8243);out;</div></blockquote>
+<div>node(4129698657);out;</div></blockquote>
+</div>
+<div class="section" id="todos-los-nodos-farmacia-de-salamanca">
+<h3>8.4.2. Todos los nodos farmacia de Salamanca<a class="headerlink" href="#todos-los-nodos-farmacia-de-salamanca" title="Enlazar permanentemente con este título">¶</a></h3>
+<blockquote>
+<div>node(40.9365, -5.7087, 40.9942, -5.6586)[&#8220;amenity&#8221;=&#8221;pharmacy&#8221;];out;</div></blockquote>
+</div>
+<div class="section" id="todas-los-nodos-paradas-de-autobus-de-la-ciudad-universitaria-en-madrid">
+<h3>8.4.3. Todas los nodos paradas de autobús de la Ciudad Universitaria en Madrid<a class="headerlink" href="#todas-los-nodos-paradas-de-autobus-de-la-ciudad-universitaria-en-madrid" title="Enlazar permanentemente con este título">¶</a></h3>
+<blockquote>
+<div>node(40.4405,-3.7404,40.4551,-3.7279)[&#8220;highway&#8221;=&#8221;bus_stop&#8221;];out;</div></blockquote>
+</div>
+<div class="section" id="todos-nodos-los-hospitales-de-madrid">
+<h3>8.4.4. Todos nodos los hospitales de Madrid<a class="headerlink" href="#todos-nodos-los-hospitales-de-madrid" title="Enlazar permanentemente con este título">¶</a></h3>
+<blockquote>
+<div>node(40.3091,-3.7707,40.5420,-3.5702)[&#8220;amenity&#8221;=&#8221;hospital&#8221;];out;</div></blockquote>
+</div>
+<div class="section" id="todas-las-ways-de-madrid-referenciadas-en-la-relacion-de-ref-m-40">
+<h3>8.4.5. Todas las ways de Madrid referenciadas en la relación de ref=M-40<a class="headerlink" href="#todas-las-ways-de-madrid-referenciadas-en-la-relacion-de-ref-m-40" title="Enlazar permanentemente con este título">¶</a></h3>
+<blockquote>
+<div>relation(40.3091,-3.7707,40.5420,-3.5702)[&#8220;ref&#8221;=&#8221;M-40&#8221;];way(r);out;</div></blockquote>
+</div>
+<div class="section" id="union">
+<h3>8.4.6. Ûnión<a class="headerlink" href="#union" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Podemos hacer la unión de dos queries poniéndolas entre paréntesis y separadas por &#8216;;&#8217;. Por ejemplo, la siguiente sentencia solicita los Nodes con &#8216;amenity=restaurant&#8217; o &#8216;amenity=pub&#8217;:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>(node(41.9837,2.8243,41.9866,2.8307)[amenity=restaurant];node(41.9837,2.8243,41.9866,2.8307)[amenity=pub]);out;
 </pre></div>
 </div>
+<p>Otro ejemplo: todos los bares o pubs del Barrio de Salamanca en Madrid</p>
+<blockquote>
+<div>(node(40.4232,-3.6918,40.4378,-3.6793)[&#8220;amenity&#8221;=&#8221;bar&#8221;];node(40.4232,-3.6918,40.4378,-3.6793)[&#8220;amenity&#8221;=&#8221;pub&#8221;];);out;</div></blockquote>
+</div>
+<div class="section" id="ways-con-recursividad-a-nodos-para-que-se-vean-las-lineas-m-607">
+<h3>8.4.7. Ways con recursividad a nodos para que se vean las líneas: M-607<a class="headerlink" href="#ways-con-recursividad-a-nodos-para-que-se-vean-las-lineas-m-607" title="Enlazar permanentemente con este título">¶</a></h3>
+<blockquote>
+<div>way(40.6573,-3.9610,40.7169,-3.7423)[&#8220;ref&#8221;=&#8221;M-607&#8221;];(._;&gt;;);out;</div></blockquote>
+</div>
+<div class="section" id="around-elementos-a-cierta-distancia-de-uno-punto-de-coordenadas-conocidas">
+<h3>8.4.8. Around: Elementos a cierta distancia de uno punto de coordenadas conocidas<a class="headerlink" href="#around-elementos-a-cierta-distancia-de-uno-punto-de-coordenadas-conocidas" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>También podríamos pedir los Nodes que se encuentran a una determinada distancia de un punto de coordenadas conocidas:</p>
+<blockquote>
+<div>node(around:100.0,41.9837,2.8243);out;</div></blockquote>
+<p>Around un elemento determinado:</p>
+<blockquote>
+<div>way(132527765);node(around:500)[&#8220;amenity&#8221;=&#8221;bar&#8221;];out;</div></blockquote>
 <p>Hay multitud de combinaciones que permiten hacer todo tipo de consultas selectivas. Se puede consultar la documentación completa del lenguaje en el siguiente enlace:</p>
 <p><a class="reference external" href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_element_id">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL#By_element_id</a></p>
+</div>
+</div>
+<div class="section" id="utilizacion-con-wget-desde-linux">
+<h2>8.5. Utilización con wget desde Linux<a class="headerlink" href="#utilizacion-con-wget-desde-linux" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>También podemos utilizar el comando linux <em>wget</em> con la siguiente estrutura:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>wget -O file.osm &quot;http://overpass-api.de/api/interpreter?data=sentencia_overpass_api&quot;
+</pre></div>
+</div>
+</div>
+<div class="section" id="utilizacion-desde-lenguajes-de-programacion">
+<h2>8.6. Utilización desde lenguajes de programación<a class="headerlink" href="#utilizacion-desde-lenguajes-de-programacion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Mediante peticiones GET o POST, podemos realizar las consultas desde cualquier lenguaje de programación.</p>
 </div>
 </div>
 
