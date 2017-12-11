@@ -3,7 +3,13 @@
 Introducción
 ============
 
-OpenStreetMap, OSM, es la mayor base de datos geográfica de libre acceso que existe. Comenzó su andadura en 2004 de la mano de Steve Coast. La información la introducen y mantienen actualizada usuarios voluntarios de todo el mundo. Toda la información de la base de datos es de libre acceso y utilización. A la fecha de escribir estas notas había más de dos millones y medio de usuarios registrados y el volumen de información almacenado era de unos 50 Gigabytes en formato comprimido. Por ejemplo, el número de nodos almacenados a la fecha era de unos 3.350 mil millones.
+OpenStreetMap, OSM, es la mayor base de datos geográfica de libre acceso que existe. Comenzó su andadura en 2004 de la mano de Steve Coast. La información la introducen y mantienen actualizada usuarios voluntarios de todo el mundo. Toda la información de la base de datos es de libre acceso y utilización. A la fecha de escribir estas notas había más de cuatro millones millones cuatrocientos mil usuarios registrados y el volumen de información almacenado era de unos 60 Gigabytes en formato comprimido (más de 800 Gb descomprimidos). Por ejemplo, el número de nodos almacenados a la fecha era de unos cuatro mil millones doscientos veintitres mil con tresmillones de juegos de cambios diarios. Las estadísticas actualizadas de uso se pueden consultar en el siguiente enlace:
+
+.. raw:: html
+
+   <a href='http://wiki.openstreetmap.org/wiki/Stats' target='_blank'>http://wiki.openstreetmap.org/wiki/Stats</a>
+
+
 
 .. image:: _static/users.png
    :width: 600px

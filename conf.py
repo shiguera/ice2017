@@ -46,8 +46,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'ICE 2016 OSM'
-copyright = '2016, Santiago Higuera'
+project = 'ICE 2017 OSM'
+copyright = '2017, Santiago Higuera'
 author = 'Santiago Higuera'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -258,7 +258,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'iceosm', 'ICE 2016 OSM Documentation',
+    (master_doc, 'iceosm', 'ICE 2017 OSM Documentation',
      [author], 1)
 ]
 
@@ -272,7 +272,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'ICEOSM', 'ICE 2016 OSM Documentation',
+    (master_doc, 'ICEOSM', 'ICE 2017 OSM Documentation',
      author, 'ICEOSM', 'One line description of project.',
      'Miscellaneous'),
 ]
