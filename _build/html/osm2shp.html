@@ -1,34 +1,33 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>9. ogr2ogr &mdash; documentación de ICE 2016 OSM - 1.0</title>
-    
+    <title>9. ogr2ogr &#8212; documentación de ICE 2016 OSM - 1.0</title>
     <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
         VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
-    <link rel="top" title="documentación de ICE 2016 OSM - 1.0" href="index.html" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
     <link rel="next" title="10. Osm4j" href="osm4j.html" />
     <link rel="prev" title="8. Overpass API" href="overpassapi.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="header-wrapper" role="banner">
       <div class="header">
         <div class="headertitle"><a
@@ -54,15 +53,15 @@
             
   <div class="section" id="ogr2ogr">
 <h1>9. ogr2ogr<a class="headerlink" href="#ogr2ogr" title="Enlazar permanentemente con este título">¶</a></h1>
-<p>Se puede utilizar GDAL para convertir ficheros <em>.osm</em> en capas shapefile. Suponiendo que tengamos un fichero <em>.osm</em> llamado &#8216;m607.osm&#8217;, el comando para extraer las capas shapefile será:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>ogr2ogr m607 -f &quot;ESRI Shapefile&quot; m607.osm
+<p>Se puede utilizar GDAL para convertir ficheros <em>.osm</em> en capas shapefile. Suponiendo que tengamos un fichero <em>.osm</em> llamado “m607.osm”, el comando para extraer las capas shapefile será:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ogr2ogr</span> <span class="n">m607</span> <span class="o">-</span><span class="n">f</span> <span class="s2">&quot;ESRI Shapefile&quot;</span> <span class="n">m607</span><span class="o">.</span><span class="n">osm</span>
 </pre></div>
 </div>
 <p>La estructura del comando es:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>ogr2ogr destination_file_name -f &quot;ESRI Shapefile&quot; source_file_name
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ogr2ogr</span> <span class="n">destination_file_name</span> <span class="o">-</span><span class="n">f</span> <span class="s2">&quot;ESRI Shapefile&quot;</span> <span class="n">source_file_name</span>
 </pre></div>
 </div>
-<p>Elresultado será un directorio de nombre &#8216;destination_file_name&#8217; que tendrá varias capas shapefile con los datos del fichero osm: points.shp, lines.shp, multilinestrings.shp, multipolygons.shp</p>
+<p>Elresultado será un directorio de nombre “destination_file_name” que tendrá varias capas shapefile con los datos del fichero osm: points.shp, lines.shp, multilinestrings.shp, multipolygons.shp</p>
 </div>
 
 
@@ -81,7 +80,7 @@
 <li class="toctree-l1"><a class="reference internal" href="josm.html">6. JOSM</a></li>
 <li class="toctree-l1"><a class="reference internal" href="qgis.html">7. QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="overpassapi.html">8. Overpass API</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">9. ogr2ogr</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">9. ogr2ogr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="osm4j.html">10. Osm4j</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python.html">11. Python OsmApi</a></li>
 <li class="toctree-l1"><a class="reference internal" href="javascript.html">12. Javascript</a></li>
@@ -96,9 +95,6 @@
                 <input type="hidden" name="check_keywords" value="yes" />
                 <input type="hidden" name="area" value="default" />
             </form>
-            <p class="searchtip" style="font-size: 90%">
-                Introduzca los términos de búsqueda o un nombre de módulo, clase o función.
-            </p>
           </div>
         </div>
         <div class="clearer"></div>
@@ -118,7 +114,7 @@
           </div>
           <div role="note" aria-label="source link">
               <br/>
-              <a href="_sources/osm2shp.txt"
+              <a href="_sources/osm2shp.rst.txt"
                 rel="nofollow">Mostrar el código</a>
           </div>
         </div>
@@ -126,8 +122,8 @@
         <div class="right">
           
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2016, Santiago Higuera.
-      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.5.
+        &#169; Derechos de autor 2016, Santiago Higuera.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.4.
     </div>
         </div>
         <div class="clearer"></div>

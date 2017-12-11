@@ -1,34 +1,33 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>8. Overpass API &mdash; documentación de ICE 2016 OSM - 1.0</title>
-    
+    <title>8. Overpass API &#8212; documentación de ICE 2016 OSM - 1.0</title>
     <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
         VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
-    <link rel="top" title="documentación de ICE 2016 OSM - 1.0" href="index.html" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
     <link rel="next" title="9. ogr2ogr" href="osm2shp.html" />
     <link rel="prev" title="7. QGIS" href="qgis.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="header-wrapper" role="banner">
       <div class="header">
         <div class="headertitle"><a
@@ -68,7 +67,7 @@
 <div><p><a class="reference external" href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide">http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide</a></p>
 <p><a class="reference external" href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL">http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL</a></p>
 </div></blockquote>
-<p>En este curso también daremos una explicación del funcionamiento y posibilidades del portal Overpass Turbo. El portal Overpass Turbo se puede utilizar para hacer consultas utilizando Overpass API y obtener las salidas en diferentes formatos. Ofrece varias utilidades relacionadas con la realización de las consultas, como la posibilidad de crear enlaces a las mismas, exportación de los resultados en varios formatos, la posibilidad de hacer consultas en lenguaje natural y otras. Más adelante, explicaremosalgunas de ellas. La dirección del portal de Overpass Turbo es:</p>
+<p>En este curso también daremos una explicación del funcionamiento y posibilidades del portal Overpass Turbo. El portal Overpass Turbo se puede utilizar para hacer consultas utilizando Overpass API y obtener las salidas en diferentes formatos. Ofrece varias utilidades relacionadas con la realización de las consultas, como la posibilidad de crear enlaces a las mismas, exportación de los resultados en varios formatos, la posibilidad de hacer consultas en lenguaje natural y otras. Más adelante, explicaremos algunas de ellas. La dirección del portal de Overpass Turbo es:</p>
 <blockquote>
 <div><a class="reference external" href="http://overpass-turbo.eu">http://overpass-turbo.eu</a></div></blockquote>
 <p>Otro portal interesante para probar o fabricar consultas es el siguiente:</p>
@@ -82,9 +81,13 @@
 </div>
 <div class="section" id="peticion-de-los-node-de-una-zona">
 <h2>8.2. Peticion de los <strong>node</strong> de una zona<a class="headerlink" href="#peticion-de-los-node-de-una-zona" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>La petición más sencilla que podemos hacer es, seguramente, la de los elementos del tipo <strong>node</strong> contenidos en un area delimitado por un <em>boundig box</em>. Un <em>bounding</em> box es una área rectangular del mapa definido por las coordenadas de su esquina inferior izquierda (sur-oeste) y las de su esquina superior derecha (norte-este). El orden en que se escriben las coordenadas es &#8216;latitud mínima, longitud mínima, latitud máxima, longitud máxima&#8217;. (<strong>Nota:</strong> <em>Hay que tener en cuenta que, cuando las longitudes o latitudes son negativas, los valores menores corresponden a valores abslutos mayores, así la longitud -3.98 es *menor</em> que la longitud -3.8, por ejemplo*).</p>
-<p>Veamos un ejemplo de una query que solicite todos los nodos contenidos en un rectángulo de coordenadas <em>&#8216;40.4447, -3.7344, 40.4484, -3.7301&#8217;</em>. La sentencia o query que tenemos que escribir en el lenguaje QL de Overpass API es la siguiente:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">node</span><span class="p">(</span><span class="mf">40.4447</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.7344</span><span class="p">,</span> <span class="mf">40.4484</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.7301</span><span class="p">));</span><span class="n">out</span><span class="p">;</span>
+<p>La petición más sencilla que podemos hacer es, seguramente, la de los elementos del tipo <strong>node</strong> contenidos en un area delimitado por un <em>boundig box</em>. Un <em>bounding</em> box es una área rectangular del mapa definido por las coordenadas de su esquina inferior izquierda (sur-oeste) y las de su esquina superior derecha (norte-este). El orden en que se escriben las coordenadas es “latitud mínima, longitud mínima, latitud máxima, longitud máxima”. (<strong>Nota:</strong> <em>Hay que tener en cuenta que, cuando las longitudes o latitudes son negativas, los valores menores corresponden a valores abslutos mayores, así la longitud -3.98 es *menor</em> que la longitud -3.8, por ejemplo*).</p>
+<p>Veamos un ejemplo de una query que solicite todos los nodos contenidos en un rectángulo de coordenadas <em>“40.4447, -3.7344, 40.4484, -3.7301”</em>. La sentencia o query que tenemos que escribir en el lenguaje QL de Overpass API es la siguiente:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">node</span><span class="p">(</span><span class="mf">40.4447</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.7344</span><span class="p">,</span> <span class="mf">40.4484</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.7301</span><span class="p">));</span><span class="n">out</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>El mismo ejemplo, con otras coordenadas:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">node</span><span class="p">(</span><span class="mf">41.9842</span><span class="p">,</span> <span class="mf">2.8272</span><span class="p">,</span> <span class="mf">41.9860</span><span class="p">,</span> <span class="mf">2.8287</span><span class="p">));</span><span class="n">out</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Puedes probar la orden tecleándola en el portal <a class="reference external" href="http://overpass-turbo.eu/">Overpass Turbo</a> o directamente accediendo al siguiente enlace que se ha obtenido mediante la opción <em>share</em> de dicho portal:</p>
@@ -96,7 +99,7 @@
 <li>La primera orden es <em>(node(minlat, minlon, maxlat, maxlon))</em>. El bounding box se especifica como: (minLat, minLon, maxLat, maxLon).</li>
 <li>La segunda orden es <em>out</em></li>
 </ul>
-<p>Las dos ordenes se separan por un punto y coma y se ejecutan una a continuación de otra. Podemos enlazar varias ordenes una detrás de otra separándolas por punto y coma. La orden completa funciona a modo &#8216;<em>tubería</em>&#8216;. El resultado de cada orden individual se pasa a la siguiente orden, que operará sobre dicho resultado. En el ejemplo anterior, el resultado de los nodos del bounding box son los que se pasan a la orden <em>out</em>, que nos devuelve el conjunto de datos.</p>
+<p>Las dos ordenes se separan por un punto y coma y se ejecutan una a continuación de otra. Podemos enlazar varias ordenes una detrás de otra separándolas por punto y coma. La orden completa funciona a modo “<em>tubería</em>”. El resultado de cada orden individual se pasa a la siguiente orden, que operará sobre dicho resultado. En el ejemplo anterior, el resultado de los nodos del bounding box son los que se pasan a la orden <em>out</em>, que nos devuelve el conjunto de datos.</p>
 <p>Podemos afinar nuestra búsqueda.Para ello vamos a añadir un filtro que seleccione solo los nodos que tengan la etiqueta <strong>highway</strong> con el valor <strong>bus_stop</strong>. Aplicaremos esta orden a un boundig box un poco mayor, que abarque una zona amplia de la Ciudad Universitaria. De esta forma obtendremos todas las paradas de autobús que figuren en el mapa dentro de la zona especificada por el bounding box:</p>
 <p><a href="http://overpass-turbo.eu/s/jPD" target="_blank">(node(40.4405, -3.7371, 40.4516, -3.7197)[highway=bus_stop]);out;</a>.</p>
 <p>El portal <em>Overpass Turbo</em> nos ofrece la posibilidad de obtener los resultados dibujando los nodos sobre un mapa o en formato <strong>OSM XML</strong>. Para ello hay que pulsar la pestaña correspondiente en la esquina superior derecha.</p>
@@ -124,85 +127,85 @@
 <div class="section" id="un-elemento-por-su-id">
 <h3>8.4.1. Un elemento por su ID<a class="headerlink" href="#un-elemento-por-su-id" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Si conocemos el <em>Id</em> del elemento que queremos descargar podemos solicitar la información del mismo:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">node</span><span class="p">(</span><span class="mi">4129698657</span><span class="p">);</span><span class="n">out</span><span class="p">;</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">node</span><span class="p">(</span><span class="mi">4129698657</span><span class="p">);</span><span class="n">out</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="todos-los-nodos-con-una-etiqueta-determinada">
 <h3>8.4.2. Todos los nodos con una etiqueta determinada<a class="headerlink" href="#todos-los-nodos-con-una-etiqueta-determinada" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Todas las farmacias del Barrio de Salamanca en Madrid:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>node(40.9365, -5.7087, 40.9942, -5.6586)[&quot;amenity&quot;=&quot;pharmacy&quot;];out;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">node</span><span class="p">(</span><span class="mf">40.9365</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.7087</span><span class="p">,</span> <span class="mf">40.9942</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.6586</span><span class="p">)[</span><span class="s2">&quot;amenity&quot;</span><span class="o">=</span><span class="s2">&quot;pharmacy&quot;</span><span class="p">];</span><span class="n">out</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Todas los nodos paradas de autobús de la Ciudad Universitaria en Madrid:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>node(40.4405,-3.7404,40.4551,-3.7279)[&quot;highway&quot;=&quot;bus_stop&quot;];out;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">node</span><span class="p">(</span><span class="mf">40.4405</span><span class="p">,</span><span class="o">-</span><span class="mf">3.7404</span><span class="p">,</span><span class="mf">40.4551</span><span class="p">,</span><span class="o">-</span><span class="mf">3.7279</span><span class="p">)[</span><span class="s2">&quot;highway&quot;</span><span class="o">=</span><span class="s2">&quot;bus_stop&quot;</span><span class="p">];</span><span class="n">out</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Todos nodos los hospitales de Madrid:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>node(40.3091,-3.7707,40.5420,-3.5702)[&quot;amenity&quot;=&quot;hospital&quot;];out;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">node</span><span class="p">(</span><span class="mf">40.3091</span><span class="p">,</span><span class="o">-</span><span class="mf">3.7707</span><span class="p">,</span><span class="mf">40.5420</span><span class="p">,</span><span class="o">-</span><span class="mf">3.5702</span><span class="p">)[</span><span class="s2">&quot;amenity&quot;</span><span class="o">=</span><span class="s2">&quot;hospital&quot;</span><span class="p">];</span><span class="n">out</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="todos-los-nodos-con-dos-etiquetas-determinadas">
 <h3>8.4.3. Todos los nodos con dos etiquetas determinadas<a class="headerlink" href="#todos-los-nodos-con-dos-etiquetas-determinadas" title="Enlazar permanentemente con este título">¶</a></h3>
-<p>Podemos poner como condición que el valor de dos o más etiquetas esté determinado, por ejemplo, para encontrar el Restaurante &#8216;<em>El Albero</em>&#8216; de Moralzarzal:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>node(40.6631, -4.0142, 40.6927, -3.9468)[&quot;amenity&quot;=&quot;restaurant&quot;][&quot;name&quot;=&quot;El Albero&quot;];out;
+<p>Podemos poner como condición que el valor de dos o más etiquetas esté determinado, por ejemplo, para encontrar el Restaurante “<em>El Albero</em>” de Moralzarzal:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">node</span><span class="p">(</span><span class="mf">40.6631</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.0142</span><span class="p">,</span> <span class="mf">40.6927</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.9468</span><span class="p">)[</span><span class="s2">&quot;amenity&quot;</span><span class="o">=</span><span class="s2">&quot;restaurant&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="o">=</span><span class="s2">&quot;El Albero&quot;</span><span class="p">];</span><span class="n">out</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>También podríamos encontrarlo sin especificar el <em>bounding box</em>, solo por etiquetas:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>node[&quot;addr:city&quot;=&quot;Moralzarzal&quot;][&quot;amenity&quot;=&quot;restaurant&quot;][&quot;name&quot;=&quot;El Albero&quot;];out;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">node</span><span class="p">[</span><span class="s2">&quot;addr:city&quot;</span><span class="o">=</span><span class="s2">&quot;Moralzarzal&quot;</span><span class="p">][</span><span class="s2">&quot;amenity&quot;</span><span class="o">=</span><span class="s2">&quot;restaurant&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="o">=</span><span class="s2">&quot;El Albero&quot;</span><span class="p">];</span><span class="n">out</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="ways-de-una-relation">
 <h3>8.4.4. Ways de una Relation<a class="headerlink" href="#ways-de-una-relation" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Todas las ways de Madrid referenciadas en la relación de ref=M-40:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>relation(40.3091,-3.7707,40.5420,-3.5702)[&quot;ref&quot;=&quot;M-40&quot;];way(r);out;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">relation</span><span class="p">(</span><span class="mf">40.3091</span><span class="p">,</span><span class="o">-</span><span class="mf">3.7707</span><span class="p">,</span><span class="mf">40.5420</span><span class="p">,</span><span class="o">-</span><span class="mf">3.5702</span><span class="p">)[</span><span class="s2">&quot;ref&quot;</span><span class="o">=</span><span class="s2">&quot;M-40&quot;</span><span class="p">];</span><span class="n">way</span><span class="p">(</span><span class="n">r</span><span class="p">);</span><span class="n">out</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="ways-con-recursividad-a-nodos-para-que-se-vean-las-lineas">
 <h3>8.4.5. Ways con recursividad a nodos para que se vean las líneas<a class="headerlink" href="#ways-con-recursividad-a-nodos-para-que-se-vean-las-lineas" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>La carretera M-607:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>way(40.6573,-3.9610,40.7169,-3.7423)[&quot;ref&quot;=&quot;M-607&quot;];(._;&gt;;);out;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">way</span><span class="p">(</span><span class="mf">40.6573</span><span class="p">,</span><span class="o">-</span><span class="mf">3.9610</span><span class="p">,</span><span class="mf">40.7169</span><span class="p">,</span><span class="o">-</span><span class="mf">3.7423</span><span class="p">)[</span><span class="s2">&quot;ref&quot;</span><span class="o">=</span><span class="s2">&quot;M-607&quot;</span><span class="p">];(</span><span class="o">.</span><span class="n">_</span><span class="p">;</span><span class="o">&gt;</span><span class="p">;);</span><span class="n">out</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Todos los ways con la etiqueta <em>building=house</em> de una determinada zona:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>way(40.67441, -3.97063, 40.67812, -3.96221)[&quot;building&quot;=&quot;house&quot;];(._;&gt;;);out;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">way</span><span class="p">(</span><span class="mf">40.67441</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.97063</span><span class="p">,</span> <span class="mf">40.67812</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.96221</span><span class="p">)[</span><span class="s2">&quot;building&quot;</span><span class="o">=</span><span class="s2">&quot;house&quot;</span><span class="p">];(</span><span class="o">.</span><span class="n">_</span><span class="p">;</span><span class="o">&gt;</span><span class="p">;);</span><span class="n">out</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="union">
 <h3>8.4.6. Unión<a class="headerlink" href="#union" title="Enlazar permanentemente con este título">¶</a></h3>
-<p>Podemos hacer la unión de dos queries poniéndolas entre paréntesis y separadas por &#8216;;&#8217;. Por ejemplo, la siguiente sentencia solicita los Nodes con &#8216;amenity=restaurant&#8217; o &#8216;amenity=pub&#8217;:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>(node(41.9837,2.8243,41.9866,2.8307)[amenity=restaurant];
-node(41.9837,2.8243,41.9866,2.8307)[amenity=pub]);out;
+<p>Podemos hacer la unión de dos queries poniéndolas entre paréntesis y separadas por “;”. Por ejemplo, la siguiente sentencia solicita los Nodes con “amenity=restaurant” o “amenity=pub”:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">node</span><span class="p">(</span><span class="mf">41.9837</span><span class="p">,</span><span class="mf">2.8243</span><span class="p">,</span><span class="mf">41.9866</span><span class="p">,</span><span class="mf">2.8307</span><span class="p">)[</span><span class="n">amenity</span><span class="o">=</span><span class="n">restaurant</span><span class="p">];</span>
+<span class="n">node</span><span class="p">(</span><span class="mf">41.9837</span><span class="p">,</span><span class="mf">2.8243</span><span class="p">,</span><span class="mf">41.9866</span><span class="p">,</span><span class="mf">2.8307</span><span class="p">)[</span><span class="n">amenity</span><span class="o">=</span><span class="n">pub</span><span class="p">]);</span><span class="n">out</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Otro ejemplo: todos los bares o pubs del Barrio de Salamanca en Madrid:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>(node(40.4232,-3.6918,40.4378,-3.6793)[&quot;amenity&quot;=&quot;bar&quot;];
-node(40.4232,-3.6918,40.4378,-3.6793)[&quot;amenity&quot;=&quot;pub&quot;];);out;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">node</span><span class="p">(</span><span class="mf">40.4232</span><span class="p">,</span><span class="o">-</span><span class="mf">3.6918</span><span class="p">,</span><span class="mf">40.4378</span><span class="p">,</span><span class="o">-</span><span class="mf">3.6793</span><span class="p">)[</span><span class="s2">&quot;amenity&quot;</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">];</span>
+<span class="n">node</span><span class="p">(</span><span class="mf">40.4232</span><span class="p">,</span><span class="o">-</span><span class="mf">3.6918</span><span class="p">,</span><span class="mf">40.4378</span><span class="p">,</span><span class="o">-</span><span class="mf">3.6793</span><span class="p">)[</span><span class="s2">&quot;amenity&quot;</span><span class="o">=</span><span class="s2">&quot;pub&quot;</span><span class="p">];);</span><span class="n">out</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Otro ejemplo podría ser todos los edificios y piscinas de una determinada zona:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>(way(40.67441, -3.97063, 40.67812, -3.96221)[&quot;building&quot;=&quot;house&quot;];
-way(40.67441, -3.97063, 40.67812, -3.96221)[&quot;leisure&quot;=&quot;swimming_pool&quot;]);
-(._;&gt;;);out;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">way</span><span class="p">(</span><span class="mf">40.67441</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.97063</span><span class="p">,</span> <span class="mf">40.67812</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.96221</span><span class="p">)[</span><span class="s2">&quot;building&quot;</span><span class="o">=</span><span class="s2">&quot;house&quot;</span><span class="p">];</span>
+<span class="n">way</span><span class="p">(</span><span class="mf">40.67441</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.97063</span><span class="p">,</span> <span class="mf">40.67812</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.96221</span><span class="p">)[</span><span class="s2">&quot;leisure&quot;</span><span class="o">=</span><span class="s2">&quot;swimming_pool&quot;</span><span class="p">]);</span>
+<span class="p">(</span><span class="o">.</span><span class="n">_</span><span class="p">;</span><span class="o">&gt;</span><span class="p">;);</span><span class="n">out</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="around-elementos-a-cierta-distancia-de-un-punto">
 <h3>8.4.7. Around: Elementos a cierta distancia de un punto<a class="headerlink" href="#around-elementos-a-cierta-distancia-de-un-punto" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Podemos pedir los Nodes que se encuentran a una determinada distancia de un punto de coordenadas conocidas:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>node(around:100.0,41.9837,2.8243);out;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">node</span><span class="p">(</span><span class="n">around</span><span class="p">:</span><span class="mf">100.0</span><span class="p">,</span><span class="mf">41.9837</span><span class="p">,</span><span class="mf">2.8243</span><span class="p">);</span><span class="n">out</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Un ejemplo podría ser obtener las farmacias a menos de un kilómetro de la Plaza del Carmen, en Madrid:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>node(around:1000.0,40.41876,-3.70331)[&quot;amenity&quot;=&quot;pharmacy&quot;];out;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">node</span><span class="p">(</span><span class="n">around</span><span class="p">:</span><span class="mf">1000.0</span><span class="p">,</span><span class="mf">40.41876</span><span class="p">,</span><span class="o">-</span><span class="mf">3.70331</span><span class="p">)[</span><span class="s2">&quot;amenity&quot;</span><span class="o">=</span><span class="s2">&quot;pharmacy&quot;</span><span class="p">];</span><span class="n">out</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Around de un elemento determinado del que conocemos su <em>Id</em>. En el siguiente ejemplo se obtienen los bares a menos de 500 metros de la iglesia de Moralzarzal:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>way(132527765);node(around:500)[&quot;amenity&quot;=&quot;bar&quot;];out;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">way</span><span class="p">(</span><span class="mi">132527765</span><span class="p">);</span><span class="n">node</span><span class="p">(</span><span class="n">around</span><span class="p">:</span><span class="mi">500</span><span class="p">)[</span><span class="s2">&quot;amenity&quot;</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">];</span><span class="n">out</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Hay multitud de combinaciones que permiten hacer todo tipo de consultas selectivas. Se puede consultar la documentación completa del lenguaje en el siguiente enlace:</p>
@@ -216,7 +219,7 @@ way(40.67441, -3.97063, 40.67812, -3.96221)[&quot;leisure&quot;=&quot;swimming_p
 <div class="section" id="acceder-a-la-informacion-de-un-elemento-conocido-su-tipo-y-su-id">
 <h2>8.6. Acceder a la información de un elemento conocido su tipo y su Id<a class="headerlink" href="#acceder-a-la-informacion-de-un-elemento-conocido-su-tipo-y-su-id" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Podemos acceder directamente a la información de un elemento accediendo a la web dirección:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>http://www.openstreetmap.org/tipo/id
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">openstreetmap</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">tipo</span><span class="o">/</span><span class="nb">id</span>
 </pre></div>
 </div>
 <p>Un ejemplo sería el siguiente, en el que se accede a la información de la Iglesia de Moralzarzal:</p>
@@ -227,7 +230,7 @@ way(40.67441, -3.97063, 40.67812, -3.96221)[&quot;leisure&quot;=&quot;swimming_p
 <h2>8.7. Conocer el historial de cambios de un elemento<a class="headerlink" href="#conocer-el-historial-de-cambios-de-un-elemento" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Utilizando el procedimiento del apartado anterior, en la parte inferior del panel de información del elemento aparece un enlace que nos mostrará el historial de cambios.</p>
 <p>También podemos acceder directamente, si conocemos el tipo de elemento y su id mediante la siguiente <em>url</em>:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>http://www.openstreetmap.org/tipo/id/history
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">openstreetmap</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">tipo</span><span class="o">/</span><span class="nb">id</span><span class="o">/</span><span class="n">history</span>
 </pre></div>
 </div>
 <p>Por ejemplo, para acceder al historial de la Plaza de Toros de Moralzarzal, que tiene el id=93278820:</p>
@@ -236,7 +239,7 @@ way(40.67441, -3.97063, 40.67812, -3.96221)[&quot;leisure&quot;=&quot;swimming_p
 <div class="section" id="utilizacion-con-wget-desde-linux">
 <h2>8.8. Utilización con wget desde Linux<a class="headerlink" href="#utilizacion-con-wget-desde-linux" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>También podemos utilizar el comando linux <em>wget</em> con la siguiente estrutura:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>wget -O file.osm &quot;http://overpass-api.de/api/interpreter?data=sentencia_overpass_api&quot;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="o">-</span><span class="n">O</span> <span class="n">file</span><span class="o">.</span><span class="n">osm</span> <span class="s2">&quot;http://overpass-api.de/api/interpreter?data=sentencia_overpass_api&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -261,9 +264,7 @@ way(40.67441, -3.97063, 40.67812, -3.96221)[&quot;leisure&quot;=&quot;swimming_p
 <li class="toctree-l1"><a class="reference internal" href="wikispain.html">5. El WIKI de OSM en español</a></li>
 <li class="toctree-l1"><a class="reference internal" href="josm.html">6. JOSM</a></li>
 <li class="toctree-l1"><a class="reference internal" href="qgis.html">7. QGIS</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">8. Overpass API</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">8. Overpass API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="osm2shp.html">9. ogr2ogr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="osm4j.html">10. Osm4j</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python.html">11. Python OsmApi</a></li>
@@ -279,9 +280,6 @@ way(40.67441, -3.97063, 40.67812, -3.96221)[&quot;leisure&quot;=&quot;swimming_p
                 <input type="hidden" name="check_keywords" value="yes" />
                 <input type="hidden" name="area" value="default" />
             </form>
-            <p class="searchtip" style="font-size: 90%">
-                Introduzca los términos de búsqueda o un nombre de módulo, clase o función.
-            </p>
           </div>
         </div>
         <div class="clearer"></div>
@@ -301,7 +299,7 @@ way(40.67441, -3.97063, 40.67812, -3.96221)[&quot;leisure&quot;=&quot;swimming_p
           </div>
           <div role="note" aria-label="source link">
               <br/>
-              <a href="_sources/overpassapi.txt"
+              <a href="_sources/overpassapi.rst.txt"
                 rel="nofollow">Mostrar el código</a>
           </div>
         </div>
@@ -309,8 +307,8 @@ way(40.67441, -3.97063, 40.67812, -3.96221)[&quot;leisure&quot;=&quot;swimming_p
         <div class="right">
           
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2016, Santiago Higuera.
-      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.5.
+        &#169; Derechos de autor 2016, Santiago Higuera.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.4.
     </div>
         </div>
         <div class="clearer"></div>

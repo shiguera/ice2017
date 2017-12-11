@@ -1,34 +1,33 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>2. Estructura de la información en OSM &mdash; documentación de ICE 2016 OSM - 1.0</title>
-    
+    <title>2. Estructura de la información en OSM &#8212; documentación de ICE 2016 OSM - 1.0</title>
     <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
         VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
-    <link rel="top" title="documentación de ICE 2016 OSM - 1.0" href="index.html" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
     <link rel="next" title="3. Descarga de datos desde OpenStreetMap" href="descargaosm.html" />
     <link rel="prev" title="1. Introducción" href="intro.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="header-wrapper" role="banner">
       <div class="header">
         <div class="headertitle"><a
@@ -70,7 +69,7 @@
 <p><a class="reference external" href="http://wiki.openstreetmap.org/wiki/Map_Features">http://wiki.openstreetmap.org/wiki/Map_Features</a></p>
 <p>Cada primitiva geométrica tiene una serie de <strong>atributos</strong> que permiten caracterizar a los elementos que representan:</p>
 <ul class="simple">
-<li><strong>id</strong>: Es el identificativo del elemento en la base de datos. A cada elemento le corresponde un <em>id</em> único, mediante el cuál es posible identificarlo en la base de datos. Hay tablas diferentes en la base de datos para los elementos del tipo <em>node</em>, <em>way</em> o <em>relation</em>, y cada una de ellas tiene su lista de <em>id&#8217;s</em>. Por ello, puede suceder que un elemento <em>node</em> tenga el mismo <em>id</em> que un elemento <em>way</em>, por ejemplo, pero al tratarse de distinto tipo de elemento, la identificación sigue siendo única.</li>
+<li><strong>id</strong>: Es el identificativo del elemento en la base de datos. A cada elemento le corresponde un <em>id</em> único, mediante el cuál es posible identificarlo en la base de datos. Hay tablas diferentes en la base de datos para los elementos del tipo <em>node</em>, <em>way</em> o <em>relation</em>, y cada una de ellas tiene su lista de <em>id’s</em>. Por ello, puede suceder que un elemento <em>node</em> tenga el mismo <em>id</em> que un elemento <em>way</em>, por ejemplo, pero al tratarse de distinto tipo de elemento, la identificación sigue siendo única.</li>
 <li><strong>version</strong>: la primera vez que se graba un elemento en la base de datos se le asigna el número de versión <em>1</em>. Este número de versión se va incrementando cada vez que el elemento se actualice o se le realicen modificaciones en sus atributos o tags.</li>
 <li><strong>changeset</strong>: Cada vez que un usuario realiza una serie de cambios y los sube a la base de datos de OSM, dicho conjunto de cambios se identifican con un identificador que quedará registrado en la base de datos de OSM, junto con el usuario y la fecha en que se han realizado. El identificativo del último conjunto de cambios que ha modificado cada elemento se guarda en este atributo.</li>
 <li><strong>user</strong>: este atributo guarda el nombre del usuario que ha realizado la última edición o actualización del elemento.</li>
@@ -87,30 +86,30 @@
 <li><strong>lon</strong>: longitud geográfica del punto en el sistema de referencia <em>WGS84</em>. Al igual que con la latitud, se utilizan siete decimales, que confieren una precisión de aproximadamente un centímetro en el ecuador.</li>
 </ul>
 <p>Un ejemplo de un Node en formato <em>OSM</em>:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>&lt;node id=&quot;25496583&quot; lat=&quot;51.5173639&quot; lon=&quot;-0.140043&quot; version=&quot;1&quot; changeset=&quot;203496&quot;
-      user=&quot;80n&quot; uid=&quot;1238&quot; visible=&quot;true&quot; timestamp=&quot;2007-01-28T11:40:26Z&quot;/&gt;
-  &lt;tag k=&quot;highway&quot; v=&quot;traffic_signals&quot;&gt;
-&lt;/node&gt;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">node</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;25496583&quot;</span> <span class="n">lat</span><span class="o">=</span><span class="s2">&quot;51.5173639&quot;</span> <span class="n">lon</span><span class="o">=</span><span class="s2">&quot;-0.140043&quot;</span> <span class="n">version</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">changeset</span><span class="o">=</span><span class="s2">&quot;203496&quot;</span>
+      <span class="n">user</span><span class="o">=</span><span class="s2">&quot;80n&quot;</span> <span class="n">uid</span><span class="o">=</span><span class="s2">&quot;1238&quot;</span> <span class="n">visible</span><span class="o">=</span><span class="s2">&quot;true&quot;</span> <span class="n">timestamp</span><span class="o">=</span><span class="s2">&quot;2007-01-28T11:40:26Z&quot;</span><span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="n">tag</span> <span class="n">k</span><span class="o">=</span><span class="s2">&quot;highway&quot;</span> <span class="n">v</span><span class="o">=</span><span class="s2">&quot;traffic_signals&quot;</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">node</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="way">
 <h2>2.2. Way<a class="headerlink" href="#way" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Representa una geometría de <em>Linestring</em>. Consta de una lista de Nodes identificados por su <em>Id</em> y una lista de etiquetas. Un ejemplo de Way en formato <em>OSM</em>:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>&lt;way id=&quot;5090250&quot; visible=&quot;true&quot; timestamp=&quot;2009-01-19T19:07:25Z&quot; version=&quot;8&quot;
-      changeset=&quot;816806&quot; user=&quot;Blumpsy&quot; uid=&quot;64226&quot;&gt;
-  &lt;nd ref=&quot;822403&quot;/&gt;
-  &lt;nd ref=&quot;21533912&quot;/&gt;
-  &lt;nd ref=&quot;821601&quot;/&gt;
-  &lt;nd ref=&quot;21533910&quot;/&gt;
-  &lt;nd ref=&quot;135791608&quot;/&gt;
-  &lt;nd ref=&quot;333725784&quot;/&gt;
-  &lt;nd ref=&quot;333725781&quot;/&gt;
-  &lt;nd ref=&quot;823771&quot;/&gt;
-  &lt;tag k=&quot;highway&quot; v=&quot;residential&quot;/&gt;
-  &lt;tag k=&quot;name&quot; v=&quot;Clipstone Street&quot;/&gt;
-  &lt;tag k=&quot;oneway&quot; v=&quot;yes&quot;/&gt;
-&lt;/way&gt;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">way</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;5090250&quot;</span> <span class="n">visible</span><span class="o">=</span><span class="s2">&quot;true&quot;</span> <span class="n">timestamp</span><span class="o">=</span><span class="s2">&quot;2009-01-19T19:07:25Z&quot;</span> <span class="n">version</span><span class="o">=</span><span class="s2">&quot;8&quot;</span>
+      <span class="n">changeset</span><span class="o">=</span><span class="s2">&quot;816806&quot;</span> <span class="n">user</span><span class="o">=</span><span class="s2">&quot;Blumpsy&quot;</span> <span class="n">uid</span><span class="o">=</span><span class="s2">&quot;64226&quot;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">nd</span> <span class="n">ref</span><span class="o">=</span><span class="s2">&quot;822403&quot;</span><span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="n">nd</span> <span class="n">ref</span><span class="o">=</span><span class="s2">&quot;21533912&quot;</span><span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="n">nd</span> <span class="n">ref</span><span class="o">=</span><span class="s2">&quot;821601&quot;</span><span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="n">nd</span> <span class="n">ref</span><span class="o">=</span><span class="s2">&quot;21533910&quot;</span><span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="n">nd</span> <span class="n">ref</span><span class="o">=</span><span class="s2">&quot;135791608&quot;</span><span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="n">nd</span> <span class="n">ref</span><span class="o">=</span><span class="s2">&quot;333725784&quot;</span><span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="n">nd</span> <span class="n">ref</span><span class="o">=</span><span class="s2">&quot;333725781&quot;</span><span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="n">nd</span> <span class="n">ref</span><span class="o">=</span><span class="s2">&quot;823771&quot;</span><span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="n">tag</span> <span class="n">k</span><span class="o">=</span><span class="s2">&quot;highway&quot;</span> <span class="n">v</span><span class="o">=</span><span class="s2">&quot;residential&quot;</span><span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="n">tag</span> <span class="n">k</span><span class="o">=</span><span class="s2">&quot;name&quot;</span> <span class="n">v</span><span class="o">=</span><span class="s2">&quot;Clipstone Street&quot;</span><span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="n">tag</span> <span class="n">k</span><span class="o">=</span><span class="s2">&quot;oneway&quot;</span> <span class="n">v</span><span class="o">=</span><span class="s2">&quot;yes&quot;</span><span class="o">/&gt;</span>
+<span class="o">&lt;/</span><span class="n">way</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>Si el último punto de un Way coincide con el primero, entonces se trata de una línea cerrada. Según el valor de las etiquetas puede tratarse de un area o simplemente de una línea cerrada.</p>
@@ -120,11 +119,11 @@
 <p>Sirven para representar entidades más complejas. Consta de una lista de elementos <em>member</em> cada uno de los cuales tiene su <em>type</em>, su <em>id</em> y su <em>role</em>, y una lista de etiquetas. Las <em>Relations</em> aceptadas por los renderers se pueden consultar en:</p>
 <p><a class="reference external" href="http://wiki.openstreetmap.org/wiki/Types_of_relation">http://wiki.openstreetmap.org/wiki/Types_of_relation</a></p>
 <p>Una <em>Relation</em> de uso común es la <em>multipolygon</em>, con sus <em>roles</em> <em>outer</em> e <em>inner</em> que permite definir edificios u otras superficies con huecos. Un ejemplo sería:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>&lt;relation id=&quot;1&quot;&gt;
-  &lt;tag k=&quot;type&quot; v=&quot;multipolygon&quot; /&gt;
-  &lt;member type=&quot;way&quot; id=&quot;1&quot; role=&quot;outer&quot; /&gt;
-  &lt;member type=&quot;way&quot; id=&quot;2&quot; role=&quot;inner&quot; /&gt;
-&lt;/relation&gt;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">relation</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">tag</span> <span class="n">k</span><span class="o">=</span><span class="s2">&quot;type&quot;</span> <span class="n">v</span><span class="o">=</span><span class="s2">&quot;multipolygon&quot;</span> <span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="n">member</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;way&quot;</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">role</span><span class="o">=</span><span class="s2">&quot;outer&quot;</span> <span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="n">member</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;way&quot;</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;2&quot;</span> <span class="n">role</span><span class="o">=</span><span class="s2">&quot;inner&quot;</span> <span class="o">/&gt;</span>
+<span class="o">&lt;/</span><span class="n">relation</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="_images/multipolygon.png"><img alt="multipolygon" class="align-center" src="_images/multipolygon.png" style="width: 400px;" /></a>
@@ -142,9 +141,7 @@
           <h3>Tabla de Contenidos</h3>
           <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introducción</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">2. Estructura de la información en OSM</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Estructura de la información en OSM</a></li>
 <li class="toctree-l1"><a class="reference internal" href="descargaosm.html">3. Descarga de datos desde OpenStreetMap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="editorid.html">4. El Editor iD</a></li>
 <li class="toctree-l1"><a class="reference internal" href="wikispain.html">5. El WIKI de OSM en español</a></li>
@@ -166,9 +163,6 @@
                 <input type="hidden" name="check_keywords" value="yes" />
                 <input type="hidden" name="area" value="default" />
             </form>
-            <p class="searchtip" style="font-size: 90%">
-                Introduzca los términos de búsqueda o un nombre de módulo, clase o función.
-            </p>
           </div>
         </div>
         <div class="clearer"></div>
@@ -188,7 +182,7 @@
           </div>
           <div role="note" aria-label="source link">
               <br/>
-              <a href="_sources/primitivas.txt"
+              <a href="_sources/primitivas.rst.txt"
                 rel="nofollow">Mostrar el código</a>
           </div>
         </div>
@@ -196,8 +190,8 @@
         <div class="right">
           
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2016, Santiago Higuera.
-      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.5.
+        &#169; Derechos de autor 2016, Santiago Higuera.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.4.
     </div>
         </div>
         <div class="clearer"></div>

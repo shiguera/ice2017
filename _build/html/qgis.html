@@ -1,34 +1,33 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>7. QGIS &mdash; documentación de ICE 2016 OSM - 1.0</title>
-    
+    <title>7. QGIS &#8212; documentación de ICE 2016 OSM - 1.0</title>
     <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
         VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/translations.js"></script>
-    <link rel="top" title="documentación de ICE 2016 OSM - 1.0" href="index.html" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
     <link rel="next" title="8. Overpass API" href="overpassapi.html" />
     <link rel="prev" title="6. JOSM" href="josm.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="header-wrapper" role="banner">
       <div class="header">
         <div class="headertitle"><a
@@ -60,15 +59,15 @@
 <p><strong>Nota:</strong> En caso de dificultad para encontrar la capa del <em>PNOA</em>, se puede utilizar directamente la siguiente <em>url</em>:</p>
 <p><a class="reference external" href="http://www.ign.es/wms-inspire/pnoa-ma?request=GetCapabilities&amp;service=WMS&amp;">PNOA Máxima actualidad</a></p>
 <p>A continuación procederemos a descargar los datos <em>OpenStreetMap</em> de la zona a un fichero en formato <em>.osm</em>. Tendremos que asignarle un nombre y ubicación al fichero y, tras aceptar, el fichero con los datos de <em>OpenStreetMap</em> quedará guardado en el disco en formato <em>OSM</em>.</p>
-<p>Lo siguiente es abrir el fichero con <em>QGIS</em>. Para ello hay que seleccionar la opción &#8216;<em>Añadir capa vectorial</em>&#8216; y buscar el fichero que hemos descargado. Veremos que nos ofrece varias capas para seleccionar, según se ve en la figura siguiente:</p>
+<p>Lo siguiente es abrir el fichero con <em>QGIS</em>. Para ello hay que seleccionar la opción “<em>Añadir capa vectorial</em>” y buscar el fichero que hemos descargado. Veremos que nos ofrece varias capas para seleccionar, según se ve en la figura siguiente:</p>
 <a class="reference internal image-reference" href="_images/qgiscapasosm.png"><img alt="qgis capas osm" class="align-center" src="_images/qgiscapasosm.png" style="width: 500px;" /></a>
-<p>Podemos seleccionar solo alguna de ellas o pulsar en &#8216;<em>seleccionar todo</em>&#8216;, con loque cargaremos todas las capas en QGIS.</p>
+<p>Podemos seleccionar solo alguna de ellas o pulsar en “<em>seleccionar todo</em>”, con loque cargaremos todas las capas en QGIS.</p>
 <p>A partir de ahí, podremos disponer de cada una de las capas para operar con ellas, visualizarlas, editarlas, editar su tabla de atributos, hacer búsquedas de elementos concretos a partir del valor de alguna de las etiquetas y cualquier otra acción que se pueda realizar sobre una capa vectorial.</p>
 <a class="reference internal image-reference" href="_images/qgisdataosm.png"><img alt="qgis data osm" class="align-center" src="_images/qgisdataosm.png" style="width: 700px;" /></a>
 <div class="section" id="seleccionar-objetos-espaciales-por-filtro">
 <h2>7.1. Seleccionar objetos espaciales por filtro<a class="headerlink" href="#seleccionar-objetos-espaciales-por-filtro" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Una posibilidad es seleccionar una serie de elementos de una de las capas a partir del valor de alguna de las etiquetas. Una vez seleccionadas, podremos grabarlas de manera independiente en formato shapefile, por ejemplo. Esto se hace aplicando un filtro en la tabla de atributos de la capa y luego seleccionando la opción de menu &#8216;<em>Capa -&gt; save as</em>&#8216;, sin olvidarnos de activar el checking &#8216;<em>guardar solo los objetos espaciales seleccionados</em>&#8216;</p>
-<p>Desde la misma opción de menú &#8216;<em>Guardar como</em>&#8216; podemos seleccionar otros formatos, como <em>sqlite</em>, <em>geojson</em>, <em>Autocad DXF</em>, <em>CSV</em>, <em>Microstation</em>, <em>DBF</em>, <em>GPX</em> y otros.</p>
+<p>Una posibilidad es seleccionar una serie de elementos de una de las capas a partir del valor de alguna de las etiquetas. Una vez seleccionadas, podremos grabarlas de manera independiente en formato shapefile, por ejemplo. Esto se hace aplicando un filtro en la tabla de atributos de la capa y luego seleccionando la opción de menu “<em>Capa -&gt; save as</em>”, sin olvidarnos de activar el checking “<em>guardar solo los objetos espaciales seleccionados</em>”</p>
+<p>Desde la misma opción de menú “<em>Guardar como</em>” podemos seleccionar otros formatos, como <em>sqlite</em>, <em>geojson</em>, <em>Autocad DXF</em>, <em>CSV</em>, <em>Microstation</em>, <em>DBF</em>, <em>GPX</em> y otros.</p>
 <p>Por ejemplo, si lo guardamos en formato <em>DBF</em> o <em>CSV</em> podremos abrir luego los datos con la hoja de cálculo.</p>
 </div>
 <div class="section" id="exportar-a-postgis">
@@ -91,9 +90,7 @@
 <li class="toctree-l1"><a class="reference internal" href="editorid.html">4. El Editor iD</a></li>
 <li class="toctree-l1"><a class="reference internal" href="wikispain.html">5. El WIKI de OSM en español</a></li>
 <li class="toctree-l1"><a class="reference internal" href="josm.html">6. JOSM</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">7. QGIS</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">7. QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="overpassapi.html">8. Overpass API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="osm2shp.html">9. ogr2ogr</a></li>
 <li class="toctree-l1"><a class="reference internal" href="osm4j.html">10. Osm4j</a></li>
@@ -110,9 +107,6 @@
                 <input type="hidden" name="check_keywords" value="yes" />
                 <input type="hidden" name="area" value="default" />
             </form>
-            <p class="searchtip" style="font-size: 90%">
-                Introduzca los términos de búsqueda o un nombre de módulo, clase o función.
-            </p>
           </div>
         </div>
         <div class="clearer"></div>
@@ -132,7 +126,7 @@
           </div>
           <div role="note" aria-label="source link">
               <br/>
-              <a href="_sources/qgis.txt"
+              <a href="_sources/qgis.rst.txt"
                 rel="nofollow">Mostrar el código</a>
           </div>
         </div>
@@ -140,8 +134,8 @@
         <div class="right">
           
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2016, Santiago Higuera.
-      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.5.
+        &#169; Derechos de autor 2016, Santiago Higuera.
+      Creado con <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.4.
     </div>
         </div>
         <div class="clearer"></div>

@@ -1,0 +1,621 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fecha",
+				"fecha_nacimiento"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"end",
+				"end{equation}\tsliderulebook.tex"
+			],
+			[
+				"textb",
+				"textbf{text}\tlatex-document"
+			],
+			[
+				"usepackage",
+				"usepackage{package}\tlatex-document"
+			],
+			[
+				"ref",
+				"ref{key}\tlatex-document"
+			],
+			[
+				"label",
+				"label{key}\tlatex-document"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
+				"backgr",
+				"background-color"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"font-st",
+				"font-style"
+			],
+			[
+				"texti",
+				"textit{text}\tlatex-document"
+			],
+			[
+				"u",
+				"ul\tTag"
+			],
+			[
+				"se",
+				"section\tTag"
+			],
+			[
+				"android",
+				"android-studio"
+			],
+			[
+				"a",
+				"appName"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/LaTeXing/LaTeX.sublime-build",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 372.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Build With: LaTeX"
+			],
+			[
+				"mar",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"m",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"clea",
+				"LaTeXing: Clean up (Remove) all Nonessential Files"
+			],
+			[
+				"fill",
+				"LaTeXing: Fill Anywhere"
+			],
+			[
+				"italic",
+				"Snippet: Italic Shape Text"
+			],
+			[
+				"Build: ",
+				"Build: Clean up Files"
+			],
+			[
+				"latex",
+				"LaTeXing: Jump To PDF"
+			],
+			[
+				"t",
+				"LaTeXing: Open PDF"
+			],
+			[
+				"la",
+				"LaTeXing: Lookup TeX Symbol"
+			],
+			[
+				"Snippet: ",
+				"Snippet: trycatch"
+			],
+			[
+				"Package",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 485.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"view.encoding()",
+			"show_encoding()"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/shiguera/ownCloud/tesis/articles/SigLibre2017/Presentacion_ISO19148/README.md",
+		"/home/shiguera/ownCloud/tesis/articles/SigLibre2017/Presentacion_OSM/index.html",
+		"/home/shiguera/ownCloud/tesis/articles/SigLibre2017/Presentacion_ISO19148/index.html",
+		"/home/shiguera/ownCloud/tesis/articles/SigLibre2017/Presentacion_ISO19142/README.md",
+		"/home/shiguera/ownCloud/tesis/articles/SigLibre2017/Presentacion_OSM/README.md",
+		"/home/shiguera/ownCloud/tesis/articles/SigLibre2017/Presentacion_ISO19142/index.html",
+		"/home/shiguera/ownCloud/tesis/2016-2017/index.html",
+		"/home/shiguera/ownCloud/tesis/2016-2017/tesis.html",
+		"/home/shiguera/ownCloud/tesis/2016-2017/TesisMain/abstract.txt",
+		"/home/shiguera/ownCloud/tesis/iosm/m607_ExtendedAndWithTrafficSignals.osm",
+		"/home/shiguera/ownCloud/tesis/2016-2017/Datos/CaminoMatarrubia/matarrubia.osm",
+		"/home/shiguera/ownCloud/tesis/articles/PaginaPersonal/index.html",
+		"/home/shiguera/ownCloud/tesis/2016-2017/TesisMain/pruebas.tex",
+		"/home/shiguera/ownCloud/tesis/2016-2017/TesisMain/mystyle.sty",
+		"/home/shiguera/.config/sublime-text-3/Packages/User/trailing_spaces.sublime-settings",
+		"/home/shiguera/ownCloud/tesis/2016-2017/Datos/Datos_M325/VillCol1_Para_ArcGIS.txt",
+		"/home/shiguera/ownCloud/tesis/2016-2017/Datos/qgis_projects/TracksGarmin/Track_2017-03-06 123215_1.gpx",
+		"/home/shiguera/ownCloud/tesis/2016-2017/Datos/qgis_projects/TracksGarmin/Track_2017-03-06 123215_2.gpx",
+		"/home/shiguera/ownCloud/tesis/2016-2017/Datos/qgis_projects/TracksGarmin/Track_2017-03-06 123215_3.gpx",
+		"/home/shiguera/ownCloud/tesis/2016-2017/Datos/qgis_projects/TracksGarmin/2017-02-19 11.05.52 Día_seg1.gpx",
+		"/home/shiguera/ownCloud/tesis/2016-2017/Datos/qgis_projects/TracksGarmin/2017-02-19 11.05.52 Día_seg2.gpx",
+		"/home/shiguera/ownCloud/tesis/2016-2017/Datos/qgis_projects/TracksGarmin/2017-02-19 11.05.52 Día.gpx",
+		"/home/shiguera/ownCloud/InformaticaCaminos/2016-17/PlazasProfesor/PaginaWebEnlaces/index.html",
+		"/home/shiguera/ownCloud/InformaticaCaminos/2016-17/PlazasProfesor/PaginaWebEnlaces/upload.sh",
+		"/home/shiguera/ownCloud/tesis/articles/TallerHOTCaminos_Feb2017/index.html",
+		"/home/shiguera/ownCloud/tesis/articles/TallerHOTCaminos_Feb2017/upload.sh",
+		"/home/shiguera/PycharmProjects/Notebook/notebook.py",
+		"/home/shiguera/PycharmProjects/Notebook/Menu.py",
+		"/home/shiguera/PycharmProjects/Notebook/Note.py",
+		"/home/shiguera/ownCloud/workspace/pruebas/hello_1.sh",
+		"/home/shiguera/kbsp.sh",
+		"/home/shiguera/ownCloud/workspace_c/Hello/main.cpp",
+		"/home/shiguera/ownCloud/workspace_c/Hello/cuad.cpp",
+		"/home/shiguera/ownCloud/workspace_c/Hello/functions.cpp",
+		"/home/shiguera/ownCloud/workspace_c/Hello/valign.cpp",
+		"/home/shiguera/ownCloud/MOOC UPM/mooc2017/modulo_1/ejercicio_1_5_3.m",
+		"/home/shiguera/ownCloud/tesis/articles/OSMGISCaminos/Presentacion/index.html",
+		"/home/shiguera/ownCloud/MOOC UPM/mooc2017/modulo_6/README.md",
+		"/home/shiguera/ownCloud/MOOC UPM/mooc2017/README.md",
+		"/home/shiguera/ownCloud/InformaticaCaminos/2016-17/m/datos.txt",
+		"/home/shiguera/ownCloud/InformaticaCaminos/2016-17/Problemas/wordcount.m",
+		"/home/shiguera/ownCloud/InformaticaCaminos/2016-17/NotaParaElForo.txt",
+		"/home/shiguera/ownCloud/tesis/articles/CursosICE/CursoOSM_2016/wikispain.rst",
+		"/home/shiguera/ownCloud/tesis/articles/CursosICE/CursoOSM_2016/overpassapi.rst",
+		"/home/shiguera/ownCloud/tesis/articles/CursosICE/CursoOSM_2016/conf.py",
+		"/home/shiguera/ownCloud/tesis/articles/CursosICE/CursoOSM_2016/Presentacion/index.html",
+		"/home/shiguera/ownCloud/tesis/articles/CursosICE/CursoOSM_2016/primitivas.rst",
+		"/home/shiguera/ownCloud/tesis/articles/CursosICE/CursoOSM_2016/descargaosm.rst",
+		"/home/shiguera/ownCloud/tesis/articles/CursosICE/CursoOSM_2016/editorid.rst",
+		"/home/shiguera/ownCloud/tesis/articles/CursosICE/CursoOSM_2016/index.rst",
+		"/home/shiguera/ownCloud/tesis/articles/CursosICE/CursoOSM_2016/Presentacion/upload.sh",
+		"/home/shiguera/ownCloud/tesis/articles/CursosICE/CursoOSM_2016/intro.rst",
+		"/home/shiguera/ownCloud/tesis/iosm/Cambridgeshire.osm",
+		"/home/shiguera/ownCloud/tesis/iosm/Cambridgeshire_sample.osm",
+		"/home/shiguera/ownCloud/tesis/iosm/README.MD",
+		"/home/shiguera/Dropbox/Tesis_SHiguera/Tesis/Articles/InventariosDeCarreteras_AIC/img/israel_bycicle.osm",
+		"/home/shiguera/ownCloud/tesis/articles/AutomationInConstruction/RevisionEnBaseCorrectores/main_rev1.tex",
+		"/home/shiguera/ownCloud/tesis/articles/AutomationInConstruction/RevisionEnBaseCorrectores/Revision_notes.txt",
+		"/home/shiguera/ownCloud/InformaticaCaminos/2016-17/blog/flow.html",
+		"/home/shiguera/ownCloud/InformaticaCaminos/2016-17/m/ramanujan_pi.m",
+		"/home/shiguera/ownCloud/tesis/articles/reconstruccionVertical/m/gradeParabole.m",
+		"/home/shiguera/ownCloud/tesis/articles/reconstruccionVertical/m/ParabPtoPdtePto.m",
+		"/home/shiguera/ownCloud/tesis/articles/reconstruccionVertical/m/prueba.m",
+		"/home/shiguera/ownCloud/tesis/articles/Cartomundo/Presentacion/index.html",
+		"/home/shiguera/ownCloud/tesis/articles/Cartomundo/Presentacion/upload.sh",
+		"/home/shiguera/ownCloud/tesis/articles/Cartomundo/index.rst",
+		"/home/shiguera/ownCloud/tesis/articles/Cartomundo/conf.py",
+		"/home/shiguera/ownCloud/tesis/articles/Cartomundo/editorid.rst",
+		"/home/shiguera/ownCloud/tesis/articles/Cartomundo/intro.rst",
+		"/etc/ssh/ssh_config",
+		"/etc/apt/sources.list.d/owncloud-client.list",
+		"/home/shiguera/ownCloud/tesis/articles/Cartomundo/primitivas.rst",
+		"/home/shiguera/ownCloud/tesis/articles/Cartomundo/mobileapps.rst",
+		"/home/shiguera/ownCloud/tesis/articles/Cartomundo/josm.rst",
+		"/home/shiguera/ownCloud/tesis/articles/Cartomundo/javascript.rst",
+		"/home/shiguera/ownCloud/tesis/articles/Cartomundo/Presentacion/demo.html",
+		"/home/shiguera/ownCloud/tesis/articles/Cartomundo/.gitignore",
+		"/home/shiguera/ownCloud/tesis/articles/CursosICE/CursoOSM_2016/ficha_cursoUsoDeDatosOpenStreetMap.tex",
+		"/home/shiguera/.config/sublime-text-3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/etc/sudoers",
+		"/home/shiguera/ownCloud/tesis/articles/PensamientoMatemático/PresentacionMatEverywhere_2016/index.html",
+		"/home/shiguera/.local/share/applications/eclipse.desktop",
+		"/opt/lampp/htdocs/downloadall.sh",
+		"/opt/lampp/htdocs/downloadweblibreriasantander.sh",
+		"/usr/share/app-install/desktop/eclipse-platform:eclipse.desktop",
+		"/etc/default/grub",
+		"/home/shiguera/ownCloud/tesis/articles/AutomationInConstruction/mailto_Abhijit.txt",
+		"/home/shiguera/ownCloud/documents/particular/CCHermanos.txt",
+		"/home/shiguera/ownCloud/tesis/articles/PensamientoMatemático/ReglasDeCalculo_book/sliderulebook.tex",
+		"/home/shiguera/spkb.sh",
+		"/home/shiguera/ownCloud/tesis/articles/HighwayInventories/PresentacionCITValencia2016/index.html",
+		"/home/shiguera/ownCloud/tesis/articles/HighwayInventories/PresentacionCITValencia2016/img/relations.xml",
+		"/home/shiguera/ownCloud/tesis/articles/CursoIngeoexpert/PropuestaIndiceCurso.tex",
+		"/home/shiguera/ownCloud/tesis/articles/tesina/master/intro.tex",
+		"/home/shiguera/ownCloud/tesis/articles/tesina/master/stateoftheart.tex",
+		"/home/shiguera/ownCloud/tesis/articles/tesina/master/docA.tex",
+		"/home/shiguera/ownCloud/tesis/articles/tesina/master/metodologia.tex",
+		"/home/shiguera/Documents/Mercatorlab/Ofertas_vivas/ptc/informe.tex",
+		"/home/shiguera/Documents/Mercatorlab/Ofertas_vivas/ptc/presentacion.tex",
+		"/home/shiguera/Dropbox/tesis/articles/reconstruccionVertical/2015ISHGD-Higuera-AlignmentReconstruction.tex",
+		"/home/shiguera/Dropbox/tesis/articles/tesina/master/resumen.tex",
+		"/home/shiguera/Dropbox/tesis/articles/tesina/master/docA.tex",
+		"/home/shiguera/Dropbox/tesis/articles/tesis2014/main.tex",
+		"/home/shiguera/tesis/workspace/VideoPlayer/videoplayer.log",
+		"/home/shiguera/tesis/workspace/VideoPlayer/.gitignore",
+		"/home/shiguera/Documents/Mercatorlab/Proyectos_vivos/RoadPlayer/usermanual.tex",
+		"/media/shiguera/MUSIC/indicatecDoc.txt",
+		"/home/shiguera/Dropbox/tesis/articles/tesis2014/tex/abstract.tex",
+		"/home/shiguera/Dropbox/tesis/articles/ISHGD2015/ReviewerCommentsResponse.txt",
+		"/home/shiguera/Dropbox/tesis/articles/tesis2014/tex/objetivos.tex",
+		"/home/shiguera/Dropbox/tesis/articles/tesis2014/tex/metodologia.tex",
+		"/home/shiguera/Dropbox/tesis/articles/reconstruction/reconstruction.tex",
+		"/home/shiguera/Dropbox/tesis/articles/tesis2014/tex/titlepage.tex",
+		"/home/shiguera/tesis/workspace/ExifUtil/.gitignore",
+		"/home/shiguera/Dropbox/tesis/articles/tesis2014/tex/stateoftheart.tex",
+		"/home/shiguera/Dropbox/tesis/articles/tesis2014/mystyle.sty",
+		"/home/shiguera/Dropbox/tesis/articles/tesis2014/main.aux",
+		"/home/shiguera/tesis/workspace/GpxParser/README.md",
+		"/home/shiguera/Dropbox/tesis/articles/tesis2014/tex/trozos.tex",
+		"/home/shiguera/Dropbox/tesis/articles/tesis2014/main.bbl",
+		"/home/shiguera/.config/sublime-text-3/Packages/LaTeXing/LaTeXing.sublime-settings",
+		"/home/shiguera/.octaverc",
+		"/home/shiguera/Documents/geoinquietos/learnosm/_posts/en/coordination/0500-10-23-tasking-manager.md",
+		"/home/shiguera/.bashrc",
+		"/home/shiguera/Dropbox/tesis/articles/tesina/master/style.tex",
+		"/home/shiguera/tesis/workspace/Patterns/.gitignore",
+		"/home/shiguera/tesis/workspace/Patterns/README.md",
+		"/home/shiguera/tesis/workspace/TrackMap/.gitignore"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Fuente",
+			"Abrevadero",
+			"Fuente",
+			"Señalización",
+			"traffic_sign",
+			"action='modify' visible='true' ",
+			"Node",
+			",",
+			"trkseg",
+			"trk",
+			"track",
+			"trkseg",
+			"###",
+			"00008b",
+			"00f0a0",
+			"#00ff00",
+			"<node",
+			"<way",
+			"way",
+			"learnosm/images/beginner/",
+			"editorid",
+			"/images/beginner",
+			"\\section*",
+			"github",
+			"videolan",
+			"figure",
+			"procedimiento",
+			"0.25",
+			"equation",
+			"Baass",
+			"carlson",
+			"Gikas",
+			"cafiso",
+			"equation",
+			"figure",
+			"Drakopoulos",
+			"track",
+			"output_directory_mode",
+			"equation",
+			"jimenez2010",
+			"Jimenez2010",
+			"Pérez",
+			"Drako",
+			"Mascio",
+			"brisan",
+			"sec",
+			"\\\\section",
+			"\\section",
+			"section",
+			"herraiz",
+			"octave",
+			"Imran",
+			"Campbell",
+			"Carlson",
+			"Satellite",
+			"batery",
+			"Cafiso",
+			"Drakopoulos",
+			"Cafiso",
+			"Brisan",
+			"\n\\t",
+			"\n\\s\\s\\s\\s\\s",
+			"\n  PUNTOS DEL EJE EN ALZADO",
+			"\n  PUNTOS DEL EJE EN ALZADO\n",
+			"M-607 (alzado)",
+			"M-607 (alzado)\n  PUNTOS DEL EJE EN ALZADO\nM-607 (alzado)\n",
+			"M-607 (alzado)\n  PUNTOS DEL EJE EN ALZADO\n              L              Z             P",
+			"M-607 (alzado)\n  PUNTOS DEL EJE EN ALZADO\n              L              Z             P\\l",
+			"M-607 (alzado)\n  PUNTOS DEL EJE EN ALZADO\n              L              Z             P\\n",
+			"M-607 (alzado)\n  PUNTOS DEL EJE EN ALZADO\n              L              Z             P",
+			"Campbell",
+			"autoslide",
+			"slide",
+			"reveal",
+			"slide",
+			"auto",
+			"autoslide",
+			"OpenStreet",
+			"figure",
+			"image",
+			"snippet",
+			"snipet",
+			"roadplayer",
+			">",
+			"figure",
+			"Ver Fig",
+			"table",
+			"figure",
+			"img/",
+			"table",
+			"figure",
+			"geometrical",
+			"\\textit{Android}",
+			" Android",
+			"center line",
+			"\\begin{figure",
+			"\\begin{",
+			" Google",
+			" OpenStreetMap",
+			" frame rate",
+			" tags",
+			" Android",
+			"et al",
+			" smartphone",
+			" smartphones",
+			" smartphone",
+			" smartphones",
+			" tracks",
+			" track",
+			"smartphones",
+			"smartphone",
+			"Android",
+			"yazdany",
+			"jazdany",
+			" RoadPlayer",
+			" RoadRecorder",
+			"\\textit{RoadPl",
+			"\\textit {RoadPl",
+			"\\textit {RoadPl\\ETC",
+			"\\textit {RoadPl\\ETC.",
+			"{RoadRecorder) can be played by \\textit {RoadPlayer}. \\textit {RoadPl\\ETC.",
+			"\\textit{",
+			" é",
+			"´ u",
+			" ó",
+			"˜n",
+			"´ a",
+			"˜ n"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"Señalizacion",
+			"Señalización",
+			" ",
+			"",
+			".",
+			"#",
+			"#000080",
+			"#00008b",
+			"#00f0a0",
+			"_static/",
+			"_static",
+			"id-editor",
+			"learnosm/images/beginer",
+			"\\subsection*",
+			"0.6",
+			"",
+			"&gt;",
+			"",
+			" \\textit{Android}",
+			"\\textit{Android}",
+			"centerline",
+			" \\textit{Google}",
+			" \\textit{OpenStreetMap}",
+			" \\textit{tags}",
+			" \\textit{Android}",
+			" \\textit{smartphone}",
+			" \\textit{smartphones}",
+			" \\textit{smartphone}",
+			" \\textit{Android}",
+			" \\textit{RoadPlayer}",
+			" \\textit{RoadRecorder}",
+			"é",
+			"ú",
+			"ó",
+			"ñ",
+			"á",
+			"ñ",
+			"é",
+			"ú",
+			"á",
+			"é",
+			"ó",
+			"á",
+			"ó",
+			"í",
+			"ó",
+			"\\textit{smartphones}",
+			"\\textit{smartphone}",
+			"\\textit{Android}",
+			"ó",
+			"á",
+			"é",
+			"\\textit{track}",
+			"á",
+			"ó",
+			"é",
+			"í",
+			"ó",
+			"ñ",
+			"é",
+			"á",
+			"é",
+			"í",
+			"ñ",
+			"ó",
+			"\\textit{software} desarrollado",
+			" \\textit{smartphones}",
+			" \\textit{smartphone}",
+			"\\textit{smartphone}",
+			"meta-datos"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 47.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"ls",
+				"src/main/java/com/mlab/roadplayer/api/XmlSerializable.java"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 376.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
