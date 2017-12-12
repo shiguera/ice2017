@@ -1,5 +1,5 @@
 #!/bin/bash
-# Fichero de backup en el disco duro portatil al
+# 
 
 
 # Presentaciones específicas para el curso del ICE
